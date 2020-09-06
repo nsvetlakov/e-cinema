@@ -1038,6 +1038,12 @@ hr {
   background: #E8E8E8;
   margin: 20px 0 15px; }
 
+strong {
+  font-weight: bold; }
+
+.fz16 {
+  font-size: 16px; }
+
 .container {
   margin: 0 auto;
   padding: 0 10px;
@@ -1351,7 +1357,16 @@ header .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 850px; }
+  max-width: 850px;
+  position: relative; }
+  .registration .formReg {
+    opacity: 0;
+    z-index: -1;
+    position: absolute; }
+    .registration .formReg.active {
+      opacity: 1;
+      z-index: 1;
+      position: relative; }
 
 footer .container {
   display: flex;

@@ -60,7 +60,19 @@ $(document).ready(function () {
 
     //=================================================================================================
 
+    var tabsReg = $('.tabs.reg button'),
+        formReg = $('.formReg');
 
+        tabsReg.each(function(){
+            $(this).on('click', function(){
+                data = $(this).data('tab');
+
+                $('.tabs button').removeClass('active');
+                $(this).addClass('active');
+                formReg.data('tab', data).toggleClass('active');
+            })
+        })
+    
 
 });
 

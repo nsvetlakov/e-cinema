@@ -25,18 +25,18 @@
         <h1 class="titleToEnter">Регистрация</h1>
 
         <div class="tabs reg">
-            <button class="cbtn link active">Пользователь</button>
-            <button class="cbtn link">Демонстратор</button>
+            <button class="cbtn link active" data-tab="user">Пользователь</button>
+            <button class="cbtn link" data-tab="demonstrator">Демонстратор</button>
         </div>
 
-        <div class="formReg">
+        <div class="formReg active" data-tab="user">
             <form action="#" name="formToEnter">
                 <div class="flexbox" data-column="2">
                     <div class="leftSide">
                         <div class="download">
                             <p class="m-b-10">Выберите ЭЦП или одноразовый пароль</p>
-                            <label class="labelDownload shadow" for="file-download">
-                                <input type="file" name="file-download" id="file-download" class="input-file-download">
+                            <label class="labelDownload shadow" for="file-download-1">
+                                <input type="file" name="file-download-1" id="file-download-1" class="input-file-download">
                                 <span class="fileName">Загрузить</span>
                                 <i class="icon icon-download-blue m-l-15"></i>
                             </label>
@@ -139,6 +139,86 @@
                 <a class="regToSysytem" href="index.html">Войти в систему</a>
             </div>
         </div>
+
+        <div class="formReg" data-tab="demonstrator">
+            <form action="#" name="formToEnter">
+                <div class="flexbox" data-column="2">
+                    <div class="leftSide">
+                        <p class="m-b-10">&nbsp;</p>
+                        <label class="label">
+                            <input class="input shadow" type="text" placeholder="БИН / ИИН">
+                        </label>
+                    </div>
+                    <div class="rightSide">
+                        <div class="download">
+                            <p class="m-b-10">Выберите ЭЦП</p>
+                            <label class="labelDownload shadow" for="file-download-2">
+                                <input type="file" name="file-download-2" id="file-download-2" class="input-file-download">
+                                <span class="fileName">Загрузить</span>
+                                <i class="icon icon-download-blue m-l-15"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="center m-b-30">
+                    <p class="fz16"><strong>Профайл (Автозаполняется после загрузки ЭЦП)</strong></p>
+                </div>
+
+                <div class="flexbox m-b-15" data-column="2">
+                    <div class="leftSide">
+                        <label class="label m-b-15">
+                            <input class="input shadow" disabled type="text" placeholder="Наименование">
+                        </label>
+                        <label class="label m-b-15">
+                            <input class="input shadow" disabled type="text" placeholder="Бизнес идентификационный номер (логин)">
+                        </label>
+                        <label class="label">
+                            <input class="input shadow" disabled type="text" placeholder="Руководитель">
+                        </label>
+                    </div>
+                    <div class="rightSide">
+                        <label class="label m-b-15">
+                            <input class="input shadow" disabled type="text" placeholder="Организационно-правовая форма">
+                        </label>
+                        <label class="label m-b-15">
+                            <input class="input shadow" disabled type="text" placeholder="Адрес местонахождения">
+                        </label>
+                        <div class="flexbox innerFlexbox" data-column="2">
+                            <label class="label leftSide m-r-15">
+                                <input class="input shadow" disabled type="text" placeholder="Номер телефона">
+                            </label>
+                            <label class="label rightSide">
+                                <input class="input shadow" disabled type="text" placeholder="E-mail">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="flexbox m-b-15" data-column="2">
+                    <div class="leftSide">
+                        <label class="label m-b-15">
+                            <input class="input shadow" type="text" placeholder="Пароль">
+                        </label>
+                    </div>
+                    <div class="rightSide">
+                        <label class="label m-b-15">
+                            <input class="input shadow" type="text" placeholder="Повторите пароль">
+                        </label>
+                    </div>
+                </div>
+                <div class="center">
+                    <button class="cbtn shadow blue w50">Далее</button>
+                </div>
+            </form>
+
+            <div class="center m-t-30">
+                <a class="regToSysytem" href="index.html">Войти в систему</a>
+            </div>
+        </div>
+
     </section>
 
     <footer>
