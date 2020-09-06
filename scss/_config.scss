@@ -2,108 +2,178 @@
 $spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 
+$responsive: (480, 600, 768, 993, 1100, 1200, 1300);
+
 @each $space in $spaceamounts {
-  @each $side in $sides {
-    .m-#{str-slice($side, 0, 1)}-#{$space} {
-      margin-#{$side}: #{$space}px !important;
-    }
-  
-    .p-#{str-slice($side, 0, 1)}-#{$space} {
-      padding-#{$side}: #{$space}px !important;
-    }
-  }
+	@each $side in $sides {
+		.m-#{str-slice($side, 0, 1)}-#{$space} {
+			margin-#{$side}: #{$space}px !important;
+		}
+
+		.p-#{str-slice($side, 0, 1)}-#{$space} {
+			padding-#{$side}: #{$space}px !important;
+		}	
+	}
 }
 
-$mainColor: #2E373B;
-$activeColor: #FF2C38;
+$color1: #6B6B6B;
+$color2: #838383;
+$activeColor: #98BFF9;
 $bgColor: #FFCE4F;
+$darkBlue: #2C8BE2;
+$red: #FF6C6C;
+$inputText: #9E9E9E;
+$bgDisabled: #EFEFEF;
+$hrColor: #E8E8E8;
 
-$commonFont: 'Exo 2', sans-serif; 
-$fontsize: 16px;
+
+$commonFont: 'Open Sans', sans-serif;
+$fontsize: 14px;
 
 // GENERAL DOCUMENT STYLES
+$class-icon: "icon-";
+$icon-size: 24px;
 
-.fade-in-block{
+$icon-list: (
+  ("user")
+  ("info")
+  ("lock")
+  ("download")
+  ("download-blue")
+  ("download-blue")
+  ("chevron-down")
+  ("chevron-down-small")
+
+);
+[class*='#{$class-icon}'] {
+	display: inline-block;
+	width: $icon-size;
+	height: $icon-size;
+  
+  }
+  @each $icon in $icon-list {
+	$name: $icon;
+  
+	.#{$class-icon}#{$name} {
+	  background: url("../img/icons/#{$class-icon}#{$name}.svg") no-repeat;
+	  background-size: contain;
+	}
+  }
+
+
+
+.fade-in-block {
 	opacity: 0;
 	transition-delay: .25s;
 	will-change: transform, opacity;
 	transform: translateY(4em) rotateZ(-5deg);
-	transition: transform 4s cubic-bezier(0,1,.3,1), opacity .3s ease-out;
-  
-	&[data-type="from-left"]{
+	transition: transform 4s cubic-bezier(0, 1, .3, 1), opacity .3s ease-out;
+
+	&[data-type="from-left"] {
 		transform: translateX(-4em) rotateZ(-5deg);
-		transition: transform 4s cubic-bezier(0,1,.3,1), opacity .25s ease-out;
+		transition: transform 4s cubic-bezier(0, 1, .3, 1), opacity .25s ease-out;
 	}
-	&[data-type="from-right"]{
+
+	&[data-type="from-right"] {
 		transform: translateX(4em) rotateZ(5deg);
-		transition: transform 4s cubic-bezier(0,1,.3,1), opacity .25s ease-out;
+		transition: transform 4s cubic-bezier(0, 1, .3, 1), opacity .25s ease-out;
 	}
-	&[data-delay="100"]{
-	transition-delay: .1s;
+
+	&[data-delay="100"] {
+		transition-delay: .1s;
 	}
-	&[data-delay="200"]{
+
+	&[data-delay="200"] {
 		transition-delay: .2s;
 	}
-	&[data-delay="300"]{
+
+	&[data-delay="300"] {
 		transition-delay: .3s;
 	}
-	&[data-delay="400"]{
+
+	&[data-delay="400"] {
 		transition-delay: .40s;
 	}
-	&[data-delay="500"]{
+
+	&[data-delay="500"] {
 		transition-delay: .5s;
 	}
-	&[data-delay="600"]{
+
+	&[data-delay="600"] {
 		transition-delay: .6s;
 	}
-	&[data-delay="700"]{
+
+	&[data-delay="700"] {
 		transition-delay: .7s;
 	}
-	&[data-delay="800"]{
+
+	&[data-delay="800"] {
 		transition-delay: .8s;
-	}  
-	&[data-delay="900"]{
+	}
+
+	&[data-delay="900"] {
 		transition-delay: .9s;
-	}  
-	&[data-delay="1000"]{
+	}
+
+	&[data-delay="1000"] {
 		transition-delay: 1s;
-	}  
-	&[data-delay="1100"]{
+	}
+
+	&[data-delay="1100"] {
 		transition-delay: 1.1s;
-	}  
-	&.is-visible{
+	}
+
+	&.is-visible {
 		opacity: 1;
 		transform: rotateZ(0);
-	}      
-  }
-
-a{
-  text-decoration: none;
-}
-::placeholder{
-	color: $mainColor;
+	}
 }
 
-::selection{
-  color: white;
-	background-color:$mainColor;
+a {
+	color: $activeColor;
+	text-decoration: none;
 }
 
-input, textarea{
-  outline: none;
-  font-family: $commonFont;
-	&:focus:required:invalid{
+.w100{
+	width: 100%;
+}
+.w50{
+	width: 50%;
+}
+.center{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+::placeholder {
+	color: $color1;
+}
+
+::selection {
+	color: $activeColor;
+	background-color: $color1;
+}
+
+input,
+textarea {
+	outline: none;
+	font-family: $commonFont;
+
+	&:focus:required:invalid {
 		border-color: red;
 	}
-	&:required:valid{
+
+	&:required:valid {
 		border-color: green;
 	}
 }
-body{
+
+body {
 	min-width: 320px;
 	min-height: 100vh;
 	line-height: 1.3;
-	color: $mainColor;
+	color: $color1;
 	position: relative;
 	overflow-x: hidden;
 	font-weight: normal;

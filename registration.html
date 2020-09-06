@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Cinema</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="vertical">
+
+    <header>
+        <div class="container">
+            <a class="logo" href="#"><img src="img/logo.svg" alt="E-Cinema"></a>
+            <div class="languages">
+                <a class="lang" data-lang="kz" href="#">kz</a>
+                <a class="lang active" data-lang="ru" href="#">ru</a>
+                <a class="lang" data-lang="en" href="#">en</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="registration">
+        <h1 class="titleToEnter">Регистрация</h1>
+
+        <div class="tabs reg">
+            <button class="cbtn link active">Пользователь</button>
+            <button class="cbtn link">Демонстратор</button>
+        </div>
+
+        <div class="formReg">
+            <form action="#" name="formToEnter">
+                <div class="flexbox" data-column="2">
+                    <div class="leftSide">
+                        <div class="download">
+                            <p class="m-b-10">Выберите ЭЦП или одноразовый пароль</p>
+                            <label class="labelDownload shadow" for="file-download">
+                                <input type="file" name="file-download" id="file-download" class="input-file-download">
+                                <span class="fileName">Загрузить</span>
+                                <i class="icon icon-download-blue m-l-15"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="rightSide">
+                        <div class="selectBox">
+                            <p class="m-b-10">Выберите роль</p>
+                            <div class="select">
+                                <div class="selected blue">Организация ГО</div>
+                                <div class="icon" data-select>
+                                    <i class="icon-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="show">
+                                <span>Наименование 1</span>
+                                <span>Наименование 2</span>
+                                <span>Наименование 3</span>
+                                <span>Наименование 4</span>
+                            </div>
+                            <select class="trueSelect" name="select">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="flexbox m-b-15" data-column="2">
+                    <div class="leftSide">
+                        <label class="label m-b-15">
+                            <p class="m-b-10">Имя</p>
+                            <input class="input shadow" disabled type="text" placeholder="Артём">
+                        </label>
+                        <label class="label">
+                            <p class="m-b-10">Отчество</p>
+                            <input class="input shadow" disabled type="text" placeholder="Валерьевич">
+                        </label>
+                    </div>
+                    <div class="rightSide">
+                        <label class="label m-b-15">
+                            <p class="m-b-10">Фамилия</p>
+                            <input class="input shadow" disabled type="text" placeholder="Киценко">
+                        </label>
+                        <label class="label">
+                            <p class="m-b-10">ИИН/БИН</p>
+                            <input class="input shadow" disabled type="text" placeholder="12345678909876">
+                        </label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="flexbox m-b-15" data-column="2">
+                    <div class="leftSide">
+                        <label class="label m-b-15">
+                            <input class="input shadow" type="text" placeholder="Подразделение">
+                        </label>
+
+                        <div class="flexbox innerFlexbox m-b-15" data-column="2">
+                            <label class="label leftSide">
+                                <input class="input shadow" type="text" placeholder="Е-mail">
+                            </label>
+                            <label class="label rightSide">
+                                <input class="input shadow" type="text" placeholder="Телефон">
+                            </label>
+                        </div>
+
+                        <label class="label">
+                            <input class="input shadow" type="password" placeholder="Пароль">
+                        </label>
+                    </div>
+                    <div class="rightSide">
+                        <label class="label m-b-15">
+                            <input class="input shadow" type="text" placeholder="Должность">
+                        </label>
+                        <label class="label m-b-15">
+                            <input class="input shadow" type="text" placeholder="Логин">
+                        </label>
+                        <label class="label">
+                            <input class="input shadow" type="text" placeholder="Повторите пароль">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="center">
+                    <label class="agreement m-b-20" for="checkAgreement">
+                        <input class="checkbox" type="checkbox" id="checkAgreement">
+                        <span class="text">Ознакомлен и согласен с правилами использования системы.</span>
+                    </label>                    
+                </div>
+
+                <div class="center">
+                    <button class="cbtn shadow blue w50">Регистрация</button>
+                </div>
+            </form>
+
+            <div class="center m-t-30">
+                <a class="regToSysytem" href="index.html">Войти в систему</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">® eCinema 2020 год.</div>
+
+            <nav class="fNav">
+                <ul class="fNavList">
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Правила</a></li>
+                    <li><a href="#">Техническая служба</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
