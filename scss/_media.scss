@@ -6,7 +6,31 @@
 }
 
 @media only screen and (max-width:1100px)  {
-
+    .flexbox{
+        &.wrap{
+            flex-wrap: wrap;
+        }
+        [data-order]{
+            margin-bottom: 20px;
+        }
+        [data-order='1']{
+            order: 1;
+            width: 100%;
+            margin-left: 0 !important;
+        }
+        [data-order='2']{
+            order: 2;
+        }
+        [data-order='3']{
+            order: 3;
+        }
+        [data-order='4']{
+            order: 4;
+        }
+        [data-order='5']{
+            order: 5;
+        }
+    }
 }
 
 @media only screen and (max-width:993px)  {
@@ -15,7 +39,7 @@
 
 
 @media only screen and (max-width:768px) {    
-    .w0,.w5,.w10,.w15,.w20,.w25,.w30,.w35,.w40,.w45,.w50,.w75,.w100{ width: 100%;}
+    .w0,.w5,.w10,.w15,.w20, .w23, .w24,.w25,.w30, .w33, .w35,.w40,.w45,.w50, .w60, .w75,.w100{ width: 100%;}
 
     .flexbox{
         flex-direction: column;
@@ -34,6 +58,9 @@
             .leftSide{
                 margin-right: 0px;
             }
+        }
+        [data-order]{
+            margin-bottom: 0;
         }
         .leftSide{
             margin-right: 0;

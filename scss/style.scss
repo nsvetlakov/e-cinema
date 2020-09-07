@@ -47,13 +47,25 @@ strong{
 .flexbox{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     &.flex-end{
         align-items: flex-end;
     }
+    &.center{
+        justify-content: center;
+    }
+    &.column{
+        flex-direction: column;
+    }
+
     &[data-column]{
         [data-flex]{
             + [data-flex]{margin-left: 15px;}
+        }
+    }
+    &[data-column="30"]{
+        [data-flex]{
+            + [data-flex]{margin-left: 30px;}
         }
     }
     &[data-column="inner"]{
@@ -61,6 +73,7 @@ strong{
             margin-right: 15px;
         }
     }
+
     .leftSide,
     .rightSide{
         width: 100%;
@@ -78,7 +91,7 @@ strong{
     font-weight: 600;
     line-height: 22px;
     color: $color1;
-    padding: 16px 67px;
+    padding: 16px 20px;
     border-radius: 20px;
     &.shadow{
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
@@ -89,6 +102,14 @@ strong{
         background: $activeColor;
         &:hover{
             background: darken($activeColor, 10%);
+        }
+    }
+    &.gray{
+        color: #fff;
+        @extend .transition;
+        background: #D0D0D0;
+        &:hover{
+            background: darken(#D0D0D0, 10%);
         }
     }
     &.link{
@@ -124,7 +145,6 @@ strong{
     }
     .input{
         padding: 17px 30px 18px;
-
     }
 }
 .withIcon{
@@ -172,6 +192,62 @@ strong{
         white-space: nowrap;
         padding: 0 10px;
         cursor: pointer;    
+    }
+}
+
+.numberBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .inputNumber{
+        position: relative;
+        .number{
+            max-width: 80px;
+            border: 0 none;
+            background: #fff;
+            margin-left: 20px;
+            border-radius: 20px;
+            padding: 17px 40px 18px 18px;
+            box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+            &[type="number"]::-webkit-inner-spin-button,
+            &[type="number"]::-webkit-outer-spin-button {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              margin: 0;
+            }
+            &[type="number"] {
+              -moz-appearance: textfield;
+            }
+        }
+        .arrows{
+            right: 20px;
+            width: 12px;
+            height: 12px;
+            display: flex;
+            cursor: pointer;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            &:active{
+                i{
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            &.minus{
+                bottom: 16px;
+                transform: rotate(180deg);
+            }
+            &.plus{
+                top: 16px;
+            }
+            i{
+                width: 10px;
+                height: 10px;
+            }
+        }
     }
 }
 
@@ -312,12 +388,41 @@ strong{
 
 .warningInfo{
     display: flex;
-    max-width: 400px;
     padding: 30px 20px;
     align-items: center;
     border-radius: 20px;
     border: 2px solid $red;
     justify-content: space-between;
+    &.column{
+        flex-direction: column;
+    }
+    &.start{
+        align-items: flex-start;
+    }
+    &.v2{
+        background: #fff;
+        .title{
+            color: $red;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 22px;
+            margin-bottom: 5px;
+        }
+        .text{
+            font-size: 16px;
+            p{
+                display: inline-block;
+            }
+            .link{
+                margin: 0;
+                font-size: 16px;
+                font-weight: normal;
+                color: $activeColor;
+                text-decoration: none;
+                display: inline-block;
+            }
+        }
+    }
     .icon{
         flex-shrink: 0;
         margin-right: 15px;
@@ -464,9 +569,9 @@ header{
     padding: 0 10px;
     position: relative;
     .formReg{
+        top: 0;
         opacity: 0;
-        z-index: -1;
-        
+        z-index: -1;        
         position: absolute;
         &.active{
             opacity: 1;
@@ -476,6 +581,7 @@ header{
 
 
         .steps{
+            top: 0;
             opacity: 0;
             z-index: -1;
             margin: 0 auto;
@@ -486,9 +592,36 @@ header{
                 z-index: 1;
                 position: relative;
             }
+            .titleStep{
+                color: $orange;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            .blockOrganisation{
+                max-width: 400px;
+            }
+            .addOrganisation{
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                &:hover{
+                    span{
+                        color: $activeColor;
+                    }
+                }
+                .icon{
+                    flex-shrink: 0;
+                    margin-right: 7px;
+                }
+                span{
+                    @extend .transition;
+                }
+            }
         }
     }
 }
+
+
 
 
 footer{

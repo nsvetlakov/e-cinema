@@ -60,6 +60,28 @@ $(document).ready(function () {
 
     //=================================================================================================
 
+    // Plus & Minus Inputs
+
+    var $quantityArrowMinus = $(".inputNumber .minus");
+    var $quantityArrowPlus = $(".inputNumber .plus");
+
+    $quantityArrowMinus.click(quantityMinus);
+    $quantityArrowPlus.click(quantityPlus);
+
+    function quantityMinus() {
+      var $quantityNum = $(this).siblings('.number');
+      if ($quantityNum.val() > 0) {
+        $quantityNum.val(+$quantityNum.val() - 1);
+      }
+    }
+
+    function quantityPlus() {
+      var $quantityNum = $(this).siblings('.number');
+      $quantityNum.val(+$quantityNum.val() + 1);
+    }
+
+
+    //=================================================================================================
     // Registation tabs
     var tabsReg = $('.tabs.reg button'),
         formReg = $('.formReg');
@@ -77,17 +99,47 @@ $(document).ready(function () {
     //=================================================================================================
 
     // Registration steps
-    var cbtn = $('.cbtn[data-step]');    
+    var cbtnNext = $('.cbtn[data-step]'),
+        cbtnBack = $('.cbtn[data-step-back]');    
     
-    cbtn.each(function(){
+    cbtnNext.each(function(){
         $(this).on('click', function(){
-                parent = $(this).parents('.steps');
-                nextStep = parent.next();
+            parent = $(this).parents('.steps');
+            nextStep = parent.next();
 
-                parent.removeClass('active');
-                nextStep.addClass('active');
-            })
+            parent.removeClass('active');
+            nextStep.addClass('active');
         })
+    })
+    cbtnBack.each(function(){
+        $(this).on('click', function(){
+            parent = $(this).parents('.steps');
+            backStep = parent.prev();
+
+            parent.removeClass('active');
+            backStep.addClass('active');
+        })
+    })
+
+    //=================================================================================================
+
+    // Add organisation
+
+    var addOrganisation = $('.addOrganisation'),
+        blockOrganisation = $('.blockOrganisation'),
+        org = $('.blockOrganisation .label'),
+        cloneFix = org.clone();
+
+    addOrganisation.each(function(){
+        $(this).on('click', function(){
+            clone = cloneFix.clone();
+            id = new Date().getUTCMilliseconds();
+            cloneInput = clone.find('.input').attr({
+                'name': 'org-' + id
+            });
+            blockOrganisation.append(clone);
+        })
+    })
 });
 
 
