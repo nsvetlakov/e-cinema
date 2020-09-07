@@ -21,13 +21,16 @@ body{
 hr{
     height: 1px;
     background: $hrColor;
-    margin: 20px 0 15px;
 }
 strong{
     font-weight: bold;
 }
 .fz16{
     font-size: 16px;
+}
+.maxW{
+    margin: 0 auto !important;
+    max-width: 850px !important;
 }
 
 .container{
@@ -45,7 +48,15 @@ strong{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &.innerFlexbox{
+    &.flex-end{
+        align-items: flex-end;
+    }
+    &[data-column]{
+        [data-flex]{
+            + [data-flex]{margin-left: 15px;}
+        }
+    }
+    &[data-column="inner"]{
         .leftSide{
             margin-right: 15px;
         }
@@ -53,6 +64,9 @@ strong{
     .leftSide,
     .rightSide{
         width: 100%;
+        label{
+            margin-bottom: 15px;
+        }
     }
     .leftSide{
         margin-right: 30px;
@@ -206,7 +220,11 @@ strong{
 }
 
 .selectBox{
+    margin-bottom: 15px;
     position: relative;
+    &.mb-0{
+        margin-bottom: 0;
+    }
     &.active{
         z-index: 50;
         .select{
@@ -405,6 +423,18 @@ header{
         justify-content: center;
     }
 }
+.inner-tabs{
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    .link{
+        margin: 0 60px 0 0;
+        @extend .transition;
+        &:hover{
+            color: $activeColor;
+        }
+    }
+}
 
 .toEnterSystem{
     margin: 0 auto;
@@ -432,16 +462,30 @@ header{
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
-    max-width: 850px;
     position: relative;
     .formReg{
         opacity: 0;
         z-index: -1;
+        
         position: absolute;
         &.active{
             opacity: 1;
             z-index: 1;
             position: relative;
+        }
+
+
+        .steps{
+            opacity: 0;
+            z-index: -1;
+            margin: 0 auto;
+            max-width: 1260px;
+            position: absolute; 
+            &.active{
+                opacity: 1;
+                z-index: 1;
+                position: relative;
+            }
         }
     }
 }

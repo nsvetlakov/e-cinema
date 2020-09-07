@@ -60,6 +60,7 @@ $(document).ready(function () {
 
     //=================================================================================================
 
+    // Registation tabs
     var tabsReg = $('.tabs.reg button'),
         formReg = $('.formReg');
 
@@ -73,7 +74,20 @@ $(document).ready(function () {
             })
         })
     
+    //=================================================================================================
 
+    // Registration steps
+    var cbtn = $('.cbtn[data-step]');    
+    
+    cbtn.each(function(){
+        $(this).on('click', function(){
+                parent = $(this).parents('.steps');
+                nextStep = parent.next();
+
+                parent.removeClass('active');
+                nextStep.addClass('active');
+            })
+        })
 });
 
 

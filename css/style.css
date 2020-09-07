@@ -875,6 +875,45 @@ template {
 .p-r-100 {
   padding-right: 100px !important; }
 
+.w0 {
+  width: 0%; }
+
+.w5 {
+  width: 5%; }
+
+.w10 {
+  width: 10%; }
+
+.w15 {
+  width: 15%; }
+
+.w20 {
+  width: 20%; }
+
+.w25 {
+  width: 25%; }
+
+.w30 {
+  width: 30%; }
+
+.w35 {
+  width: 35%; }
+
+.w40 {
+  width: 40%; }
+
+.w45 {
+  width: 45%; }
+
+.w50 {
+  width: 50%; }
+
+.w75 {
+  width: 75%; }
+
+.w100 {
+  width: 100%; }
+
 [class*='icon-'] {
   display: inline-block;
   width: 24px;
@@ -1035,8 +1074,7 @@ body {
 
 hr {
   height: 1px;
-  background: #E8E8E8;
-  margin: 20px 0 15px; }
+  background: #E8E8E8; }
 
 strong {
   font-weight: bold; }
@@ -1044,24 +1082,35 @@ strong {
 .fz16 {
   font-size: 16px; }
 
+.maxW {
+  margin: 0 auto !important;
+  max-width: 850px !important; }
+
 .container {
   margin: 0 auto;
   padding: 0 10px;
   max-width: 1260px;
   position: relative; }
 
-.transition, .cbtn.blue, .selectBox .select .icon, .selectBox .show span, .tabs .link, .toEnterSystem .forgetPassword, .toEnterSystem .regToSysytem, footer .container .fNav .fNavList li a {
+.transition, .cbtn.blue, .selectBox .select .icon, .selectBox .show span, .tabs .link, .inner-tabs .link, .toEnterSystem .forgetPassword, .toEnterSystem .regToSysytem, footer .container .fNav .fNavList li a {
   transition: .3s linear; }
 
 .flexbox {
   display: flex;
   align-items: center;
   justify-content: space-between; }
-  .flexbox.innerFlexbox .leftSide {
+  .flexbox.flex-end {
+    align-items: flex-end; }
+  .flexbox[data-column] [data-flex] + [data-flex] {
+    margin-left: 15px; }
+  .flexbox[data-column="inner"] .leftSide {
     margin-right: 15px; }
   .flexbox .leftSide,
   .flexbox .rightSide {
     width: 100%; }
+    .flexbox .leftSide label,
+    .flexbox .rightSide label {
+      margin-bottom: 15px; }
   .flexbox .leftSide {
     margin-right: 30px; }
 
@@ -1183,7 +1232,10 @@ strong {
     font-size: 14px; }
 
 .selectBox {
+  margin-bottom: 15px;
   position: relative; }
+  .selectBox.mb-0 {
+    margin-bottom: 0; }
   .selectBox.active {
     z-index: 50; }
     .selectBox.active .select .icon {
@@ -1339,6 +1391,15 @@ header .container {
   .tabs.reg {
     justify-content: center; }
 
+.inner-tabs {
+  display: flex;
+  margin-bottom: 30px;
+  align-items: center; }
+  .inner-tabs .link {
+    margin: 0 60px 0 0; }
+    .inner-tabs .link:hover {
+      color: #98BFF9; }
+
 .toEnterSystem {
   margin: 0 auto;
   padding: 0 10px;
@@ -1357,7 +1418,6 @@ header .container {
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
-  max-width: 850px;
   position: relative; }
   .registration .formReg {
     opacity: 0;
@@ -1367,6 +1427,16 @@ header .container {
       opacity: 1;
       z-index: 1;
       position: relative; }
+    .registration .formReg .steps {
+      opacity: 0;
+      z-index: -1;
+      margin: 0 auto;
+      max-width: 1260px;
+      position: absolute; }
+      .registration .formReg .steps.active {
+        opacity: 1;
+        z-index: 1;
+        position: relative; }
 
 footer .container {
   display: flex;
@@ -1401,13 +1471,29 @@ footer .container {
           color: #98BFF9; }
 
 @media only screen and (max-width: 768px) {
+  .w0, .w5, .w10, .w15, .w20, .w25, .w30, .w35, .w40, .w45, .w50, .w75, .w100 {
+    width: 100%; }
+
   .flexbox {
     flex-direction: column; }
-    .flexbox.innerFlexbox .leftSide {
+    .flexbox[data-column] .empty {
+      display: none; }
+    .flexbox[data-column] [data-flex] + [data-flex] {
+      margin-left: 0px;
+      margin-top: 15px; }
+    .flexbox[data-column="inner"] .leftSide {
       margin-right: 0px; }
     .flexbox .leftSide {
-      margin-right: 0;
-      margin-bottom: 15px; }
+      margin-right: 0; }
+    .flexbox .leftSide,
+    .flexbox .rightSide {
+      width: 100%; }
+      .flexbox .leftSide label,
+      .flexbox .rightSide label {
+        margin-bottom: 15px; }
+        .flexbox .leftSide label:last-child,
+        .flexbox .rightSide label:last-child {
+          margin-bottom: 0; }
 
   .toEnterSystem .forgetPassword {
     margin-bottom: 20px; }
@@ -1419,9 +1505,6 @@ footer .container {
     footer .container .fNav .fNavList li a {
       margin: 0 10px; } }
 @media only screen and (max-width: 480px) {
-  .w50 {
-    width: 100%; }
-
   footer {
     margin-top: 50px; }
     footer .container {

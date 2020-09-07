@@ -2,8 +2,6 @@
 $spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
 $sides: (top, bottom, left, right); // Leave this variable alone
 
-$responsive: (480, 600, 768, 993, 1100, 1200, 1300);
-
 @each $space in $spaceamounts {
 	@each $side in $sides {
 		.m-#{str-slice($side, 0, 1)}-#{$space} {
@@ -16,8 +14,17 @@ $responsive: (480, 600, 768, 993, 1100, 1200, 1300);
 	}
 }
 
+@each $width in $spaceamounts {
+	.w#{$width}{
+		width: #{$width}#{"%"};
+	}
+}
+
+
+
 $color1: #6B6B6B;
 $color2: #838383;
+$orange: #FDAB5F;
 $activeColor: #98BFF9;
 $bgColor: #FFCE4F;
 $darkBlue: #2C8BE2;

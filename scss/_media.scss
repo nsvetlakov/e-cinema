@@ -15,16 +15,39 @@
 
 
 @media only screen and (max-width:768px) {    
+    .w0,.w5,.w10,.w15,.w20,.w25,.w30,.w35,.w40,.w45,.w50,.w75,.w100{ width: 100%;}
+
     .flexbox{
         flex-direction: column;
-        &.innerFlexbox{
+        &[data-column]{
+            .empty{
+                display: none;
+            }
+            [data-flex]{
+                + [data-flex]{
+                    margin-left: 0px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        &[data-column="inner"]{
             .leftSide{
                 margin-right: 0px;
             }
         }
         .leftSide{
             margin-right: 0;
-            margin-bottom: 15px;
+        }
+        
+        .leftSide,
+        .rightSide{
+            width: 100%;
+            label{
+                margin-bottom: 15px;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     
@@ -61,9 +84,6 @@
 }
 
 @media only screen and (max-width:480px) {
-    .w50{
-        width: 100%;
-    }
 
     footer{
         margin-top: 50px;

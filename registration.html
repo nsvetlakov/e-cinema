@@ -25,13 +25,13 @@
         <h1 class="titleToEnter">Регистрация</h1>
 
         <div class="tabs reg">
-            <button class="cbtn link active" data-tab="user">Пользователь</button>
-            <button class="cbtn link" data-tab="demonstrator">Демонстратор</button>
+            <button class="cbtn link" data-tab="user">Пользователь</button>
+            <button class="cbtn link active" data-tab="demonstrator">Демонстратор</button>
         </div>
 
-        <div class="formReg active" data-tab="user">
-            <form action="#" name="formToEnter">
-                <div class="flexbox" data-column="2">
+        <div class="formReg maxW" data-tab="user">
+            <form action="#" name="formUserToEnter">
+                <div class="flexbox" data-column>
                     <div class="leftSide">
                         <div class="download">
                             <p class="m-b-10">Выберите ЭЦП или одноразовый пароль</p>
@@ -64,11 +64,11 @@
                     </div>
                 </div>
 
-                <hr>
+                <hr class="m-b-15">
 
-                <div class="flexbox m-b-15" data-column="2">
+                <div class="flexbox" data-column>
                     <div class="leftSide">
-                        <label class="label m-b-15">
+                        <label class="label">
                             <p class="m-b-10">Имя</p>
                             <input class="input shadow" disabled type="text" placeholder="Артём">
                         </label>
@@ -78,7 +78,7 @@
                         </label>
                     </div>
                     <div class="rightSide">
-                        <label class="label m-b-15">
+                        <label class="label">
                             <p class="m-b-10">Фамилия</p>
                             <input class="input shadow" disabled type="text" placeholder="Киценко">
                         </label>
@@ -89,15 +89,15 @@
                     </div>
                 </div>
 
-                <hr>
+                <hr class="m-b-15">
 
-                <div class="flexbox m-b-15" data-column="2">
+                <div class="flexbox" data-column>
                     <div class="leftSide">
-                        <label class="label m-b-15">
+                        <label class="label">
                             <input class="input shadow" type="text" placeholder="Подразделение">
                         </label>
 
-                        <div class="flexbox innerFlexbox m-b-15" data-column="2">
+                        <div class="flexbox" data-column="inner">
                             <label class="label leftSide">
                                 <input class="input shadow" type="text" placeholder="Е-mail">
                             </label>
@@ -111,10 +111,10 @@
                         </label>
                     </div>
                     <div class="rightSide">
-                        <label class="label m-b-15">
+                        <label class="label">
                             <input class="input shadow" type="text" placeholder="Должность">
                         </label>
-                        <label class="label m-b-15">
+                        <label class="label">
                             <input class="input shadow" type="text" placeholder="Логин">
                         </label>
                         <label class="label">
@@ -140,78 +140,186 @@
             </div>
         </div>
 
-        <div class="formReg" data-tab="demonstrator">
-            <form action="#" name="formToEnter">
-                <div class="flexbox" data-column="2">
-                    <div class="leftSide">
-                        <p class="m-b-10">&nbsp;</p>
-                        <label class="label">
-                            <input class="input shadow" type="text" placeholder="БИН / ИИН">
-                        </label>
+        <div class="formReg active" data-tab="demonstrator">
+            <form action="#" name="formDemonstratorToEnter">
+                <div class="steps maxW ">
+                    <div class="flexbox" data-column="2">
+                        <div class="leftSide">
+                            <p class="m-b-10">&nbsp;</p>
+                            <label class="label">
+                                <input class="input shadow" type="text" placeholder="БИН / ИИН">
+                            </label>
+                        </div>
+                        <div class="rightSide">
+                            <div class="download">
+                                <p class="m-b-10">Выберите ЭЦП</p>
+                                <label class="labelDownload shadow" for="file-download-2">
+                                    <input type="file" name="file-download-2" id="file-download-2" class="input-file-download">
+                                    <span class="fileName">Загрузить</span>
+                                    <i class="icon icon-download-blue m-l-15"></i>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="rightSide">
-                        <div class="download">
-                            <p class="m-b-10">Выберите ЭЦП</p>
-                            <label class="labelDownload shadow" for="file-download-2">
-                                <input type="file" name="file-download-2" id="file-download-2" class="input-file-download">
-                                <span class="fileName">Загрузить</span>
-                                <i class="icon icon-download-blue m-l-15"></i>
+
+                    <hr class="m-b-15">
+
+                    <div class="center m-b-30">
+                        <p class="fz16"><strong>Профайл (Автозаполняется после загрузки ЭЦП)</strong></p>
+                    </div>
+
+                    <div class="flexbox" data-column>
+                        <div class="leftSide">
+                            <label class="label">
+                                <input class="input shadow" disabled type="text" placeholder="Наименование">
+                            </label>
+                            <label class="label">
+                                <input class="input shadow" disabled type="text" placeholder="Бизнес идентификационный номер (логин)">
+                            </label>
+                            <label class="label">
+                                <input class="input shadow" disabled type="text" placeholder="Руководитель">
+                            </label>
+                        </div>
+                        <div class="rightSide">
+                            <label class="label">
+                                <input class="input shadow" disabled type="text" placeholder="Организационно-правовая форма">
+                            </label>
+                            <label class="label">
+                                <input class="input shadow" disabled type="text" placeholder="Адрес местонахождения">
+                            </label>
+                            <div class="flexbox" data-column="inner">
+                                <label class="label leftSide">
+                                    <input class="input shadow" disabled type="text" placeholder="Номер телефона">
+                                </label>
+                                <label class="label rightSide">
+                                    <input class="input shadow" disabled type="text" placeholder="E-mail">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="m-b-15">
+
+                    <div class="flexbox" data-column>
+                        <div class="leftSide">
+                            <label class="label">
+                                <input class="input shadow" type="text" placeholder="Пароль">
+                            </label>
+                        </div>
+                        <div class="rightSide">
+                            <label class="label">
+                                <input class="input shadow" type="text" placeholder="Повторите пароль">
                             </label>
                         </div>
                     </div>
-                </div>
-                <hr>
-                <div class="center m-b-30">
-                    <p class="fz16"><strong>Профайл (Автозаполняется после загрузки ЭЦП)</strong></p>
+                    <div class="center m-t-15">
+                        <button type="button" class="cbtn shadow blue w50" data-step>Далее</button>
+                    </div>
                 </div>
 
-                <div class="flexbox m-b-15" data-column="2">
-                    <div class="leftSide">
-                        <label class="label m-b-15">
-                            <input class="input shadow" disabled type="text" placeholder="Наименование">
-                        </label>
-                        <label class="label m-b-15">
-                            <input class="input shadow" disabled type="text" placeholder="Бизнес идентификационный номер (логин)">
-                        </label>
-                        <label class="label">
-                            <input class="input shadow" disabled type="text" placeholder="Руководитель">
-                        </label>
-                    </div>
-                    <div class="rightSide">
-                        <label class="label m-b-15">
-                            <input class="input shadow" disabled type="text" placeholder="Организационно-правовая форма">
-                        </label>
-                        <label class="label m-b-15">
-                            <input class="input shadow" disabled type="text" placeholder="Адрес местонахождения">
-                        </label>
-                        <div class="flexbox innerFlexbox" data-column="2">
-                            <label class="label leftSide m-r-15">
-                                <input class="input shadow" disabled type="text" placeholder="Номер телефона">
-                            </label>
-                            <label class="label rightSide">
-                                <input class="input shadow" disabled type="text" placeholder="E-mail">
-                            </label>
+                <div class="steps active">
+                    <div class="flexbox flex-end m-b-15" data-column>
+                        <div class="selectBox mb-0 w25" data-flex>
+                            <p class="m-b-10">Укажите регион оказания услуг</p>
+                            <div class="select">
+                                <div class="selected">Область</div>
+                                <div class="icon" data-select>
+                                    <i class="icon-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="show">
+                                <span>Область 1</span>
+                                <span>Область 2</span>
+                                <span>Область 3</span>
+                                <span>Область 4</span>
+                            </div>
+                
+                            <select class="trueSelect" name="select"><option value=""></option></select>
                         </div>
+                        <div class="selectBox mb-0 w25" data-flex>
+                            <p class="empty m-b-10">&nbsp;</p>
+                            <div class="select">
+                                <div class="selected">Город</div>
+                                <div class="icon" data-select>
+                                    <i class="icon-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="show">
+                                <span>Город 1</span>
+                                <span>Город 2</span>
+                                <span>Город 3</span>
+                                <span>Город 4</span>
+                            </div>
+                
+                            <select class="trueSelect" name="select"><option value=""></option></select>
+                        </div>
+                        <div class="selectBox mb-0 w25" data-flex>
+                            <p class="empty m-b-10">&nbsp;</p>
+                            <div class="select">
+                                <div class="selected">Район</div>
+                                <div class="icon" data-select>
+                                    <i class="icon-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="show">
+                                <span>Район 1</span>
+                                <span>Район 2</span>
+                                <span>Район 3</span>
+                                <span>Район 4</span>
+                            </div>
+                
+                            <select class="trueSelect" name="select"><option value=""></option></select>
+                        </div>
+                        <label class="label w40" data-flex>
+                            <p class="m-b-10">Код территории согласно Классификатору административно-территориальных объектов </p>
+                            <input class="input shadow" type="text" placeholder="123 478 311 348 542 5496">
+                        </label>
+                    </div>
+                    
+                    <hr class="m-b-15">
+                    
+                    <p class="fz16 m-b-30">Укажите число кинотеатров и их площадь </p>
+
+                    <div class="inner-tabs">
+                        <button class="cbtn link active">Всего</button>
+                        <button class="cbtn link">Сельская местность </button>
+                    </div>
+
+                    <div class="numberBlock">
+                        <p>Число кинотеатров, единиц</p>
+                        <input class="input number" type="number" name="cinema-count">
+                    </div>
+
+
+                    <div class="center">
+                        <button type="button"  class="cbtn shadow blue w50" data-step>Далее</button>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="center">
+                        <p>2</p>
+                    </div>
+                    <div class="center">
+                        <button type="button"  class="cbtn shadow blue w50" data-step>Далее</button>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="center">
+                        <p>3</p>
+                    </div>
+                    <div class="center">
+                        <button type="button"  class="cbtn shadow blue w50" data-step>Далее</button>
+                    </div>
+                </div>
+                <div class="steps">
+                    <div class="center">
+                        <p>4</p>
+                    </div>
+                    <div class="center">
+                        <button type="button"  class="cbtn shadow blue w50">Далее</button>
                     </div>
                 </div>
 
-                <hr>
-
-                <div class="flexbox m-b-15" data-column="2">
-                    <div class="leftSide">
-                        <label class="label m-b-15">
-                            <input class="input shadow" type="text" placeholder="Пароль">
-                        </label>
-                    </div>
-                    <div class="rightSide">
-                        <label class="label m-b-15">
-                            <input class="input shadow" type="text" placeholder="Повторите пароль">
-                        </label>
-                    </div>
-                </div>
-                <div class="center">
-                    <button class="cbtn shadow blue w50">Далее</button>
-                </div>
             </form>
 
             <div class="center m-t-30">
