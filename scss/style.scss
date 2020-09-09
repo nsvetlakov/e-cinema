@@ -58,12 +58,12 @@ strong{
         flex-direction: column;
     }
 
-    &[data-column]{
+    &[data-gap="15"]{
         [data-flex]{
             + [data-flex]{margin-left: 15px;}
         }
     }
-    &[data-column="30"]{
+    &[data-gap="30"]{
         [data-flex]{
             + [data-flex]{margin-left: 30px;}
         }

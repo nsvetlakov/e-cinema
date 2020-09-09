@@ -10,26 +10,35 @@
         &.wrap{
             flex-wrap: wrap;
         }
-        [data-order]{
-            margin-bottom: 20px;
+        &[data-column]{
+            [data-flex]{
+                width: 45%;
+                margin: 0 0 20px 0;
+
+                &:nth-child(even){
+                    margin: 0 0 0 15px;
+                }
+                &:nth-child(odd){
+                    margin: 0;
+                }
+                &[data-order='1']{
+                    order: 1;
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 20px;
+                }
+                &[data-order='2']{
+                    order: 2;
+                }
+                &[data-order='3']{
+                    order: 3;
+                }
+                &[data-order='4']{
+                    order: 4;
+                }
+            }
         }
-        [data-order='1']{
-            order: 1;
-            width: 100%;
-            margin-left: 0 !important;
-        }
-        [data-order='2']{
-            order: 2;
-        }
-        [data-order='3']{
-            order: 3;
-        }
-        [data-order='4']{
-            order: 4;
-        }
-        [data-order='5']{
-            order: 5;
-        }
+
     }
 }
 
@@ -43,10 +52,23 @@
 
     .flexbox{
         flex-direction: column;
+        .empty{
+            display: none;
+        }
         &[data-column]{
-            .empty{
-                display: none;
+            [data-flex]{
+                width: 100%;
+                margin: 0 0 20px 0 !important;
+
+                &:nth-child(even){
+                    margin: 0 0 0 0px;
+                }
+                &:nth-child(odd){
+                    margin: 0;
+                }
             }
+        }
+        &[data-gap="15"]{
             [data-flex]{
                 + [data-flex]{
                     margin-left: 0px;

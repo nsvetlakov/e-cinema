@@ -1216,9 +1216,9 @@ strong {
     justify-content: center; }
   .flexbox.column {
     flex-direction: column; }
-  .flexbox[data-column] [data-flex] + [data-flex] {
+  .flexbox[data-gap="15"] [data-flex] + [data-flex] {
     margin-left: 15px; }
-  .flexbox[data-column="30"] [data-flex] + [data-flex] {
+  .flexbox[data-gap="30"] [data-flex] + [data-flex] {
     margin-left: 30px; }
   .flexbox[data-column="inner"] .leftSide {
     margin-right: 15px; }
@@ -1676,29 +1676,40 @@ footer .container {
 @media only screen and (max-width: 1100px) {
   .flexbox.wrap {
     flex-wrap: wrap; }
-  .flexbox [data-order] {
-    margin-bottom: 20px; }
-  .flexbox [data-order='1'] {
-    order: 1;
-    width: 100%;
-    margin-left: 0 !important; }
-  .flexbox [data-order='2'] {
-    order: 2; }
-  .flexbox [data-order='3'] {
-    order: 3; }
-  .flexbox [data-order='4'] {
-    order: 4; }
-  .flexbox [data-order='5'] {
-    order: 5; } }
+  .flexbox[data-column] [data-flex] {
+    width: 45%;
+    margin: 0 0 20px 0; }
+    .flexbox[data-column] [data-flex]:nth-child(even) {
+      margin: 0 0 0 15px; }
+    .flexbox[data-column] [data-flex]:nth-child(odd) {
+      margin: 0; }
+    .flexbox[data-column] [data-flex][data-order='1'] {
+      order: 1;
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px; }
+    .flexbox[data-column] [data-flex][data-order='2'] {
+      order: 2; }
+    .flexbox[data-column] [data-flex][data-order='3'] {
+      order: 3; }
+    .flexbox[data-column] [data-flex][data-order='4'] {
+      order: 4; } }
 @media only screen and (max-width: 768px) {
   .w0, .w5, .w10, .w15, .w20, .w23, .w24, .w25, .w30, .w33, .w35, .w40, .w45, .w50, .w60, .w75, .w100 {
     width: 100%; }
 
   .flexbox {
     flex-direction: column; }
-    .flexbox[data-column] .empty {
+    .flexbox .empty {
       display: none; }
-    .flexbox[data-column] [data-flex] + [data-flex] {
+    .flexbox[data-column] [data-flex] {
+      width: 100%;
+      margin: 0 0 20px 0 !important; }
+      .flexbox[data-column] [data-flex]:nth-child(even) {
+        margin: 0 0 0 0px; }
+      .flexbox[data-column] [data-flex]:nth-child(odd) {
+        margin: 0; }
+    .flexbox[data-gap="15"] [data-flex] + [data-flex] {
       margin-left: 0px;
       margin-top: 15px; }
     .flexbox[data-column="inner"] .leftSide {

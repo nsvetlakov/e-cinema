@@ -31,7 +31,7 @@
 
         <div class="formReg maxW" data-tab="user">
             <form action="#" name="formUserToEnter">
-                <div class="flexbox" data-column>
+                <div class="flexbox" data-column data-gap="15">
                     <div class="leftSide">
                         <div class="download">
                             <p class="m-b-10">Выберите ЭЦП или одноразовый пароль</p>
@@ -66,7 +66,7 @@
 
                 <hr class="m-b-15">
 
-                <div class="flexbox" data-column>
+                <div class="flexbox" data-column data-gap="15">
                     <div class="leftSide">
                         <label class="label">
                             <p class="m-b-10">Имя</p>
@@ -91,7 +91,7 @@
 
                 <hr class="m-b-15">
 
-                <div class="flexbox" data-column>
+                <div class="flexbox" data-column data-gap="15">
                     <div class="leftSide">
                         <label class="label">
                             <input class="input shadow" type="text" placeholder="Подразделение">
@@ -142,8 +142,8 @@
 
         <div class="formReg active" data-tab="demonstrator">
             <form action="#" name="formDemonstratorToEnter">
-                <div class="steps maxW active">
-                    <div class="flexbox" data-column="2">
+                <div class="steps maxW ">
+                    <div class="flexbox" data-column data-gap="15">
                         <div class="leftSide">
                             <p class="m-b-10">&nbsp;</p>
                             <label class="label">
@@ -168,7 +168,7 @@
                         <p class="fz16"><strong>Профайл (Автозаполняется после загрузки ЭЦП)</strong></p>
                     </div>
 
-                    <div class="flexbox" data-column>
+                    <div class="flexbox" data-column data-gap="15">
                         <div class="leftSide">
                             <label class="label">
                                 <input class="input shadow" disabled type="text" placeholder="Наименование">
@@ -198,31 +198,29 @@
                         </div>
                     </div>
 
-                    <hr class="m-b-15">
+                    <hr class="m-t-15 m-b-15">
 
-                    <div class="flexbox" data-column>
-                        <div class="leftSide">
-                            <label class="label">
+                    <div class="flexbox" data-column data-gap="30">
+                            <label class="label w50" data-flex>
                                 <input class="input shadow" type="text" placeholder="Пароль">
                             </label>
-                        </div>
-                        <div class="rightSide">
-                            <label class="label">
+
+                            <label class="label w50" data-flex>
                                 <input class="input shadow" type="text" placeholder="Повторите пароль">
                             </label>
-                        </div>
                     </div>
                     <div class="center m-t-15">
                         <button type="button" class="cbtn shadow blue w50" data-step>Далее</button>
                     </div>
                 </div>
+                
                 <div class="steps">
                     <div class="flexbox center column m-b-35">
                         <h3 class="titleStep">Шаг 1-6</h3>
                         <p class="fz16"><strong>Заполните следующие поля</strong></p>  
                     </div>
 
-                    <div class="flexbox flex-end m-b-15" data-column>
+                    <div class="flexbox flex-end m-b-15" data-column data-gap="15">
                         <div class="selectBox mb-0 w25" data-flex>
                             <p class="m-b-10">Укажите регион оказания услуг</p>
                             <div class="select">
@@ -298,7 +296,7 @@
                         </div>
                     </div>
 
-                    <div class="flexbox wrap m-b-50" data-column="30">
+                    <div class="flexbox wrap m-b-50" data-column data-gap="30">
                         <div class="block w25" data-flex data-order="2">
                             <h3 class="fz16">Крытые кинотеатры</h3>
                             <hr class="m-t-10 m-b-15">
@@ -315,7 +313,7 @@
                             <h3 class="fz16">Экраны</h3>
                             <hr class="m-t-10 m-b-15">
 
-                            <div class="flexbox" data-column="30">
+                            <div class="flexbox" data-column data-gap="30">
                                 <div class="numberBlock w33" data-flex>
                                     <p>с 1 экраном </p>
                                     <div class="inputNumber">
@@ -356,12 +354,12 @@
                         </div>
                     </div>
 
-                    <div class="flexbox m-b-50" data-column="30">
+                    <div class="flexbox m-b-50" data-column data-gap="30">
                         <div class="block w100" data-flex>
                             <h3 class="fz16">Другие кинотеатры</h3>
                             <hr class="m-t-10 m-b-15">
 
-                            <div class="flexbox" data-column="30">
+                            <div class="flexbox" data-column data-gap="30">
                                 <div class="numberBlock w24" data-flex>
                                     <p>С использованием видеоизображения</p>
                                     <div class="inputNumber">
@@ -383,13 +381,13 @@
                     </div>
 
 
-                    <div class="flexbox center" data-column>
+                    <div class="flexbox center" data-column data-gap="15">
                         <button type="button" class="cbtn shadow gray w20" data-flex data-step-back>Назад</button>
                         <button type="button" class="cbtn shadow blue w20" data-flex data-step>Далее</button>
                     </div>
                 </div>
 
-                <div class="steps ">
+                <div class="steps">
                     <div class="flexbox center column m-b-35">
                         <h3 class="titleStep">Шаг 2-6</h3>
                         <p class="fz16"><strong>Заполните следующие поля</strong></p>  
@@ -402,8 +400,8 @@
                         <button class="cbtn link">Сельская местность </button>
                     </div>
 
-                    <div class="flexbox m-b-15" data-column="30">
-                        <div class="numberBlock w23" data-flex>
+                    <div class="flexbox m-b-15" data-column data-gap="15">
+                        <div class="numberBlock w24" data-flex>
                             <p>Число кинозалов в кинотеатрах </p>
                             <div class="inputNumber">
                                 <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
@@ -412,7 +410,7 @@
                             </div>
                         </div>
                         
-                        <div class="numberBlock w23" data-flex>
+                        <div class="numberBlock w24" data-flex>
                             <p>Число мест в кинозалах</p>
                             <div class="inputNumber">
                                 <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
@@ -423,99 +421,91 @@
                     </div>
 
 
-                    <div class="flexbox wrap m-b-50" data-column>
-                        <div class="leftSide" data-flex>
-                            <div class="flexbox" data-column="30">
-                                <div class="block w50" data-flex>
-                                    <h3 class="fz16">Крытые кинозалы</h3>
-                                    <hr class="m-t-10 m-b-15">
-                                    <div class="numberBlock m-b-15">
-                                        <p>Число кинозалов</p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
-                                    <div class="numberBlock">
-                                        <p>Многозальные кинотеатры</p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
+                    <div class="flexbox wrap m-b-50" data-column="4" data-gap="15">
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Крытые кинозалы</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock m-b-15">
+                                <p>Число кинозалов</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
                                 </div>
-                                <div class="block w50" data-flex>
-                                    <h3 class="fz16">Цифровые в крытых кинозалах</h3>
-                                    <hr class="m-t-10 m-b-15">
-                                    <div class="numberBlock m-b-15">
-                                        <p>Число кинозалов</p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
-                                    <div class="numberBlock">
-                                        <p>Многозальные кинотеаты</p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Многозальные кинотеатры</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
                                 </div>
                             </div>
                         </div>
-                        <div class="rightSide" data-flex>
-                            <div class="flexbox" data-column="30">
-                                <div class="block w50" data-flex>
-                                    <h3 class="fz16">Другое</h3>
-                                    <hr class="m-t-10 m-b-15">
-                                    <div class="numberBlock m-b-15">
-                                        <p>Число стационарных киноустановок</p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
-                                    <div class="numberBlock">
-                                        <p>Число передвижных киноустановок</p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Цифровые в крытых кинозалах</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock m-b-15">
+                                <p>Число кинозалов</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
                                 </div>
-                                <div class="block w50" data-flex>
-                                    <h3 class="fz16">Число мест</h3>
-                                    <hr class="m-t-10 m-b-15">
-                                    <div class="numberBlock">
-                                        <p>В кинозалах крытых кинотеатров</p>
-                                        <div class="inputNumber m-b-15">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
-                                    <div class="numberBlock">
-                                        <p>В многозальных крытых кинотеатрах </p>
-                                        <div class="inputNumber">
-                                            <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
-                                            <div class="arrows minus"><i class="icon-arrow"></i></div>
-                                            <div class="arrows plus"><i class="icon-arrow"></i></div>                           
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Многозальные кинотеаты</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Другое</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock m-b-15">
+                                <p>Число стационарных киноустановок</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Число передвижных киноустановок</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Число мест</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock">
+                                <p>В кинозалах крытых кинотеатров</p>
+                                <div class="inputNumber m-b-15">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>В многозальных крытых кинотеатрах </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
                                 </div>
                             </div>
                         </div>
                     </div>
 
 
-                    <div class="flexbox m-b-50" data-column>
+                    <div class="flexbox m-b-50" data-column data-gap="15">
                         <div class="leftSide" data-flex>
                             <p class="fz16 m-b-20">Наличие организаций, осуществляющих кинопоказ </p>
                             <div class="blockOrganisation">
@@ -534,17 +524,247 @@
                                 <h3 class="title">Обратите внимание!</h3>
                                 <div class="text">
                                     <p>Если у вас нет интеграция с вашей билетной системой, то вы должны продолжить регистрация в 
-                                    <button type="button" class="cbtn link" data-flex data-step>следующих шагах</button></p>
+                                    <button type="button" class="cbtn link" data-step>следующих шагах</button></p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flexbox center" data-column>
+                    <div class="flexbox center" data-column data-gap="15">
                         <button type="button" class="cbtn shadow gray w25" data-flex data-step-back>Назад</button>
                         <button type="submit" class="cbtn shadow blue w25" data-flex>Завершить регистрацию</button>
                     </div>
                 </div>
+
+                <div class="steps active">
+                    <div class="flexbox center column m-b-35">
+                        <h3 class="titleStep">Шаг 3-6</h3>
+                        <p class="fz16"><strong>Заполните следующие поля</strong></p>  
+                    </div>
+                    
+                    <p class="fz16 m-b-30">Укажите число киносеансов, число посетителей и доходы от оказанных услуг</p>
+
+                    <div class="inner-tabs">
+                        <button class="cbtn link active">Всего</button>
+                        <button class="cbtn link">Сельская местность </button>
+                    </div>
+
+                    <div class="flexbox wrap m-b-50" data-column="4" data-gap="15">
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Киносеансы всего</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock m-b-15">
+                                <p>Число киносеансов, единиц </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Национальные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Зарубежные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Киносеансы полнометражных фильмов</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock m-b-15">
+                                <p>Число киносеансов, единиц </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Национальные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Зарубежные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Посетителей всего</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock m-b-15">
+                                <p>Число посетителей, человек </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Национальные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Зарубежные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Посетителей полнометражных фильмов</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock">
+                                <p>Число посетителей, человек </p>
+                                <div class="inputNumber m-b-15">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Национальные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                            <div class="numberBlock">
+                                <p>Зарубежные фильмы </p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flexbox wrap m-b-50" data-column data-gap="30">
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Доход всего</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="inputBlock">
+                                <p>От оказанных услуг, тысяч тенге</p>
+                                <label class="label">
+                                    <input class="input shadow" type="text" placeholder="450 000 тнг.">
+                                </label>
+                            </div>
+                            <div class="inputBlock">
+                                <p>Национальные фильмы </p>
+                                <label class="label">
+                                    <input class="input shadow" type="text" placeholder="250 000 тнг.">
+                                </label>
+                            </div>
+                            <div class="inputBlock">
+                                <p>Зарубежные фильмы </p>
+                                <label class="label">
+                                    <input class="input shadow" type="text" placeholder="150 000 тнг.">
+                                </label>
+                            </div>
+                        </div>
+                        <div class="block w25" data-flex>
+                            <h3 class="fz16">Доход полнометражных фильмов</h3>
+                            <hr class="m-t-10 m-b-15">
+                            <div class="numberBlock">
+                                <p>Площадь кинотеатров (м²)</p>
+                                <div class="inputNumber">
+                                    <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                    <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                    <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block w50" data-flex>
+                            <h3 class="fz16">Экраны</h3>
+                            <hr class="m-t-10 m-b-15">
+
+                            <div class="flexbox" data-column data-gap="30">
+                                <div class="numberBlock w33" data-flex>
+                                    <p>с 1 экраном </p>
+                                    <div class="inputNumber">
+                                        <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                        <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                        <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                    </div>
+                                </div>
+                                <div class="numberBlock w33" data-flex>
+                                    <p>с 2-7 экранами</p>
+                                    <div class="inputNumber">
+                                        <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                        <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                        <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                    </div>
+                                </div>
+                                <div class="numberBlock w33" data-flex>
+                                    <p>с 8 и более экранами</p>
+                                    <div class="inputNumber">
+                                        <input class="number" type="number" min="0" max="99" name="cinema-count" placeholder="0">
+                                        <div class="arrows minus"><i class="icon-arrow"></i></div>
+                                        <div class="arrows plus"><i class="icon-arrow"></i></div>                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="flexbox m-b-50" data-column data-gap="15">
+                        <div class="leftSide" data-flex>
+                            <p class="fz16 m-b-20">Наличие организаций, осуществляющих кинопоказ </p>
+                            <div class="blockOrganisation">
+                                <label class="label m-b-15">
+                                    <input class="input shadow" type="text" name="org-1" placeholder="Название организаций">
+                                </label>
+                            </div>
+        
+                            <div class="addOrganisation">
+                                <i class="icon icon-plus-circle"></i>
+                                <span>Добавить еще</span>
+                            </div>
+                        </div>
+                        <div class="rightSide" data-flex>
+                            <div class="warningInfo v2 column start">
+                                <h3 class="title">Обратите внимание!</h3>
+                                <div class="text">
+                                    <p>Если у вас нет интеграция с вашей билетной системой, то вы должны продолжить регистрация в 
+                                    <button type="button" class="cbtn link" data-step>следующих шагах</button></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flexbox center" data-column data-gap="15">
+                        <button type="button" class="cbtn shadow gray w25" data-flex data-step-back>Назад</button>
+                        <button type="submit" class="cbtn shadow blue w25" data-flex>Завершить регистрацию</button>
+                    </div>
+                </div>
+
             </form>
 
             <div class="center m-t-30">
