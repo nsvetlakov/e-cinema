@@ -28,10 +28,6 @@ strong{
 .fz16{
     font-size: 16px;
 }
-.maxW{
-    margin: 0 auto !important;
-    max-width: 850px !important;
-}
 
 .container{
     margin: 0 auto;
@@ -47,15 +43,24 @@ strong{
 .flexbox{
     display: flex;
     align-items: center;
-    // justify-content: space-between;
+ 
     &.flex-end{
         align-items: flex-end;
+    }
+    &.flex-start{
+        align-items: flex-start;
     }
     &.center{
         justify-content: center;
     }
+    &.flex-row{
+        flex-direction: row;
+    }
     &.column{
         flex-direction: column;
+    }
+    &.between{
+        justify-content: space-between;
     }
 
     &[data-gap="15"]{
@@ -104,6 +109,14 @@ strong{
             background: darken($activeColor, 10%);
         }
     }
+    &.green{
+        color: #fff;
+        @extend .transition;
+        background: $green;
+        &:hover{
+            background: darken($green, 10%);
+        }
+    }
     &.gray{
         color: #fff;
         @extend .transition;
@@ -147,6 +160,7 @@ strong{
         padding: 17px 30px 18px;
     }
 }
+
 .withIcon{
     display: block;
     position: relative;
@@ -199,7 +213,9 @@ strong{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    + .numberBlock{
+        margin-top: 15px;
+    }
     .inputNumber{
         position: relative;
         .number{
@@ -251,6 +267,19 @@ strong{
     }
 }
 
+.inputBlock{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    + .inputBlock{
+        margin-top: 15px;
+    }
+    .label{
+        margin-left: 15px;
+        max-width: 140px;
+    }
+}
+
 .download{
     p{
         font-size: 16px;
@@ -296,7 +325,6 @@ strong{
 }
 
 .selectBox{
-    margin-bottom: 15px;
     position: relative;
     &.mb-0{
         margin-bottom: 0;
@@ -320,9 +348,7 @@ strong{
     .select{
         z-index: 2;
         display: flex;
-        color: $color1;
-        font-size: 16px;
-        font-weight: 600;
+        min-width: 250px;
         line-height: 22px;
         position: relative;
         background: #fff;
@@ -331,10 +357,13 @@ strong{
         border-radius: 20px;
         justify-content: space-between;
         box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05);
+
         .selected{
-            color: $color1;
             &.blue{
                 color: $darkBlue;
+            }
+            &.bold{
+                font-weight: 600;
             }
         }
         .icon{
@@ -478,6 +507,24 @@ strong{
     }    
 }
 
+.block{
+    h3{
+        color: $color1;
+    }
+}
+
+.countryBlock{
+    &.maxW{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 620px;
+    }
+    .row{
+        + .row{
+            margin-top: 20px;
+        }
+    }
+}
 
 header{
     .container{
@@ -584,9 +631,13 @@ header{
             top: 0;
             opacity: 0;
             z-index: -1;
+            width: 100%;
             margin: 0 auto;
+            position: fixed; 
             max-width: 1260px;
-            position: absolute; 
+            &.maxW{
+                max-width: 850px;
+            }
             &.active{
                 opacity: 1;
                 z-index: 1;
@@ -600,27 +651,54 @@ header{
             .blockOrganisation{
                 max-width: 400px;
             }
-            .addOrganisation{
-                display: flex;
-                cursor: pointer;
-                align-items: center;
-                &:hover{
-                    span{
-                        color: $activeColor;
-                    }
-                }
-                .icon{
-                    flex-shrink: 0;
-                    margin-right: 7px;
-                }
-                span{
-                    @extend .transition;
+        }
+    }
+}
+
+.overflowTable{
+    width: 100%;
+    overflow: auto;
+    .table{
+        width: 100%;
+        min-width: 400px;
+        thead{
+            th{
+                color: $color1;
+                text-align: left;
+                padding: 10px 15px;
+                background: #fff;
+                font-weight: 600;
+            }
+        }
+        tbody{
+            tr{
+                border-bottom: 1px solid #EBEFF2;
+                td{
+                    padding: 10px 15px;
                 }
             }
         }
     }
 }
 
+.addOrganisation,
+.addCountry{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    &:hover{
+        span{
+            color: $activeColor;
+        }
+    }
+    .icon{
+        flex-shrink: 0;
+        margin-right: 7px;
+    }
+    span{
+        @extend .transition;
+    }
+}
 
 
 

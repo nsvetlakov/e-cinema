@@ -1063,6 +1063,9 @@ template {
   background: url("../img/icons/icon-chevron-down-small.svg") no-repeat;
   background-size: contain; }
 
+.color1 {
+  color: #6B6B6B; }
+
 .fade-in-block {
   opacity: 0;
   transition-delay: .25s;
@@ -1138,7 +1141,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   line-height: 1.3;
-  color: #6B6B6B;
+  color: #9E9E9E;
   position: relative;
   overflow-x: hidden;
   font-weight: normal;
@@ -1194,17 +1197,14 @@ strong {
 .fz16 {
   font-size: 16px; }
 
-.maxW {
-  margin: 0 auto !important;
-  max-width: 850px !important; }
-
 .container {
   margin: 0 auto;
   padding: 0 10px;
   max-width: 1260px;
   position: relative; }
 
-.transition, .cbtn.blue, .cbtn.gray, .selectBox .select .icon, .selectBox .show span, .tabs .link, .inner-tabs .link, .toEnterSystem .forgetPassword, .toEnterSystem .regToSysytem, .registration .formReg .steps .addOrganisation span, footer .container .fNav .fNavList li a {
+.transition, .cbtn.blue, .cbtn.green, .cbtn.gray, .selectBox .select .icon, .selectBox .show span, .tabs .link, .inner-tabs .link, .toEnterSystem .forgetPassword, .toEnterSystem .regToSysytem, .addOrganisation span,
+.addCountry span, footer .container .fNav .fNavList li a {
   transition: .3s linear; }
 
 .flexbox {
@@ -1212,10 +1212,16 @@ strong {
   align-items: center; }
   .flexbox.flex-end {
     align-items: flex-end; }
+  .flexbox.flex-start {
+    align-items: flex-start; }
   .flexbox.center {
     justify-content: center; }
+  .flexbox.flex-row {
+    flex-direction: row; }
   .flexbox.column {
     flex-direction: column; }
+  .flexbox.between {
+    justify-content: space-between; }
   .flexbox[data-gap="15"] [data-flex] + [data-flex] {
     margin-left: 15px; }
   .flexbox[data-gap="30"] [data-flex] + [data-flex] {
@@ -1245,6 +1251,11 @@ strong {
     background: #98BFF9; }
     .cbtn.blue:hover {
       background: #68a1f6; }
+  .cbtn.green {
+    color: #fff;
+    background: #1BA642; }
+    .cbtn.green:hover {
+      background: #147a31; }
   .cbtn.gray {
     color: #fff;
     background: #D0D0D0; }
@@ -1322,6 +1333,8 @@ strong {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  .numberBlock + .numberBlock {
+    margin-top: 15px; }
   .numberBlock .inputNumber {
     position: relative; }
     .numberBlock .inputNumber .number {
@@ -1360,6 +1373,16 @@ strong {
         width: 10px;
         height: 10px; }
 
+.inputBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .inputBlock + .inputBlock {
+    margin-top: 15px; }
+  .inputBlock .label {
+    margin-left: 15px;
+    max-width: 140px; }
+
 .download p {
   font-size: 16px; }
 .download span {
@@ -1396,7 +1419,6 @@ strong {
     font-size: 14px; }
 
 .selectBox {
-  margin-bottom: 15px;
   position: relative; }
   .selectBox.mb-0 {
     margin-bottom: 0; }
@@ -1413,9 +1435,7 @@ strong {
   .selectBox .select {
     z-index: 2;
     display: flex;
-    color: #6B6B6B;
-    font-size: 16px;
-    font-weight: 600;
+    min-width: 250px;
     line-height: 22px;
     position: relative;
     background: #fff;
@@ -1424,10 +1444,10 @@ strong {
     border-radius: 20px;
     justify-content: space-between;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.05); }
-    .selectBox .select .selected {
-      color: #6B6B6B; }
-      .selectBox .select .selected.blue {
-        color: #2C8BE2; }
+    .selectBox .select .selected.blue {
+      color: #2C8BE2; }
+    .selectBox .select .selected.bold {
+      font-weight: 600; }
     .selectBox .select .icon {
       width: 24px;
       height: 24px;
@@ -1539,6 +1559,16 @@ strong {
       justify-content: center;
       border: 1px solid #9E9E9E; }
 
+.block h3 {
+  color: #6B6B6B; }
+
+.countryBlock.maxW {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 620px; }
+.countryBlock .row + .row {
+  margin-top: 20px; }
+
 header .container {
   display: flex;
   flex-shrink: 0;
@@ -1618,9 +1648,12 @@ header .container {
       top: 0;
       opacity: 0;
       z-index: -1;
+      width: 100%;
       margin: 0 auto;
-      max-width: 1260px;
-      position: absolute; }
+      position: fixed;
+      max-width: 1260px; }
+      .registration .formReg .steps.maxW {
+        max-width: 850px; }
       .registration .formReg .steps.active {
         opacity: 1;
         z-index: 1;
@@ -1631,15 +1664,36 @@ header .container {
         font-weight: bold; }
       .registration .formReg .steps .blockOrganisation {
         max-width: 400px; }
-      .registration .formReg .steps .addOrganisation {
-        display: flex;
-        cursor: pointer;
-        align-items: center; }
-        .registration .formReg .steps .addOrganisation:hover span {
-          color: #98BFF9; }
-        .registration .formReg .steps .addOrganisation .icon {
-          flex-shrink: 0;
-          margin-right: 7px; }
+
+.overflowTable {
+  width: 100%;
+  overflow: auto; }
+  .overflowTable .table {
+    width: 100%;
+    min-width: 400px; }
+    .overflowTable .table thead th {
+      color: #6B6B6B;
+      text-align: left;
+      padding: 10px 15px;
+      background: #fff;
+      font-weight: 600; }
+    .overflowTable .table tbody tr {
+      border-bottom: 1px solid #EBEFF2; }
+      .overflowTable .table tbody tr td {
+        padding: 10px 15px; }
+
+.addOrganisation,
+.addCountry {
+  display: flex;
+  cursor: pointer;
+  align-items: center; }
+  .addOrganisation:hover span,
+  .addCountry:hover span {
+    color: #98BFF9; }
+  .addOrganisation .icon,
+  .addCountry .icon {
+    flex-shrink: 0;
+    margin-right: 7px; }
 
 footer .container {
   display: flex;
@@ -1674,10 +1728,13 @@ footer .container {
           color: #98BFF9; }
 
 @media only screen and (max-width: 1100px) {
+  .mw100 {
+    width: 100% !important; }
+
   .flexbox.wrap {
     flex-wrap: wrap; }
   .flexbox[data-column] [data-flex] {
-    width: 45%;
+    width: 49%;
     margin: 0 0 20px 0; }
     .flexbox[data-column] [data-flex]:nth-child(even) {
       margin: 0 0 0 15px; }
@@ -1737,6 +1794,14 @@ footer .container {
       left: -10px; }
     footer .container .fNav .fNavList li a {
       margin: 0 10px; } }
+@media only screen and (max-width: 500px) {
+  .countryBlock .row .flex-row {
+    flex-direction: column; }
+  .countryBlock .row .selectBox {
+    width: 100%;
+    margin-bottom: 20px; }
+  .countryBlock .row .numberBlock {
+    width: 100%; } }
 @media only screen and (max-width: 480px) {
   footer {
     margin-top: 50px; }

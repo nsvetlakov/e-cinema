@@ -6,13 +6,16 @@
 }
 
 @media only screen and (max-width:1100px)  {
+    .mw100{
+        width: 100% !important;
+    }
     .flexbox{
         &.wrap{
             flex-wrap: wrap;
         }
         &[data-column]{
             [data-flex]{
-                width: 45%;
+                width: 49%;
                 margin: 0 0 20px 0;
 
                 &:nth-child(even){
@@ -130,6 +133,22 @@
 }
 @media only screen and (max-width:600px) {    
 
+}
+@media only screen and (max-width:500px) {    
+    .countryBlock{
+        .row{
+            .flex-row{
+                flex-direction: column;
+            }
+            .selectBox{
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .numberBlock{
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:480px) {

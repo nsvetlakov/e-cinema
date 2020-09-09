@@ -28,57 +28,63 @@ $(document).ready(function () {
     //=================================================================================================
 
     // SelectBox
-    var selectBox = $('.icon[data-select]');
-    selectBox.each(function(){
-        icon = $(this);
+    function selectBox() {    
+        var selectBox = $('.icon[data-select]');
+        selectBox.each(function(){
+            icon = $(this);
 
-        icon.on('click', function(){
-            parent = $(this).parents('.selectBox');
-            trueSelect = parent.find('.trueSelect option');
-            selected =  parent.find('.selected');
-            
-            show = parent.find('.show');
-            showSpan = parent.find('.show span');
-            showHeight = showSpan.innerHeight() * showSpan.length + 40;
-            
-            parent.toggleClass('active');
-            show.toggleClass('active');
-            if(show.hasClass('active')){
-                show.css({'height': showHeight});
-            } else{
-                show.css({'height': 0});
-            }
+            icon.on('click', function(){
+                console.log('111')
+                parent = $(this).parents('.selectBox');
+                trueSelect = parent.find('.trueSelect option');
+                selected =  parent.find('.selected');
+                
+                show = parent.find('.show');
+                showSpan = parent.find('.show span');
+                showHeight = showSpan.innerHeight() * showSpan.length + 40;
+                
+                parent.toggleClass('active');
+                show.toggleClass('active');
+                if(show.hasClass('active')){
+                    show.css({'height': showHeight});
+                } else{
+                    show.css({'height': 0});
+                }
 
-            show.on('click', 'span', function(){
-                text = $(this).text();
-                selected.text(text);
-                trueSelect.val(text).text(text);
-                parent.find('.icon[data-select]').trigger('click');
-            })            
+                show.on('click', 'span', function(){
+                    text = $(this).text();
+                    selected.text(text);
+                    trueSelect.val(text).text(text);
+                    parent.find('.icon[data-select]').trigger('click');
+                })            
+            })
         })
-    })
+    }
+    selectBox();
 
     //=================================================================================================
 
     // Plus & Minus Inputs
-
-    var $quantityArrowMinus = $(".inputNumber .minus");
-    var $quantityArrowPlus = $(".inputNumber .plus");
-
-    $quantityArrowMinus.click(quantityMinus);
-    $quantityArrowPlus.click(quantityPlus);
-
-    function quantityMinus() {
-      var $quantityNum = $(this).siblings('.number');
-      if ($quantityNum.val() > 0) {
-        $quantityNum.val(+$quantityNum.val() - 1);
-      }
+    function plusAndMinus() {
+        var $quantityArrowMinus = $(".inputNumber .minus");
+        var $quantityArrowPlus = $(".inputNumber .plus");
+    
+        $quantityArrowMinus.click(quantityMinus);
+        $quantityArrowPlus.click(quantityPlus);
+    
+        function quantityMinus() {
+          var $quantityNum = $(this).siblings('.number');
+          if ($quantityNum.val() > 0) {
+            $quantityNum.val(+$quantityNum.val() - 1);
+          }
+        }
+    
+        function quantityPlus() {
+          var $quantityNum = $(this).siblings('.number');
+          $quantityNum.val(+$quantityNum.val() + 1);
+        }
     }
-
-    function quantityPlus() {
-      var $quantityNum = $(this).siblings('.number');
-      $quantityNum.val(+$quantityNum.val() + 1);
-    }
+    plusAndMinus();
 
 
     //=================================================================================================
@@ -140,6 +146,35 @@ $(document).ready(function () {
             blockOrganisation.append(clone);
         })
     })
+    
+    
+    //Add country
+
+    var addCountry = $('.addCountry'),
+        countryBlock = $('.countryBlock'),
+        row = $('.countryBlock .row'),
+        rowCloneFix = row.clone();
+
+        addCountry.each(function(){
+        $(this).on('click', function(){
+            
+            clone = rowCloneFix.clone();
+            id = new Date().getUTCMilliseconds();
+            cloneSelect = clone.find('.trueSelect').attr({
+                'name': 'select-' + id
+            });
+            cloneNumber = clone.find('.number').attr({
+                'name': 'count-visitor-' + id
+            });
+
+            countryBlock.append(clone);
+            selectBox();
+            plusAndMinus();
+        })
+    })
+
+
+
 });
 
 
