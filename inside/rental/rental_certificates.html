@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Cinema</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <div class="flexWrap">
+        <header>
+            <div class="container">
+                <div class="flexbox between">
+                    <a href="#" class="logo"><img src="../../img/logo.svg" alt="e-Cinema"></a>
+                    <div class="searchBlock">
+                        <form action="" name="searchSite">
+                            <input class="search" type="text" name="search" placeholder="Поиск">
+                            <div class="icon">
+                                <i class="icon icon-search"></i>
+                                <i class="icon icon-close"></i>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="languages">
+                        <a class="lang" data-lang="kz" href="#">kz</a>
+                        <a class="lang active" data-lang="ru" href="#">ru</a>
+                        <a class="lang" data-lang="en" href="#">en</a>
+                    </div>
+                    <div class="notification active"><i class="icon icon-bell"></i></div>
+                    <div class="userBlock flexbox">
+                        <i class="icon icon-user"></i>
+                        <div class="text flexbox column">
+                            <span class="name">User Profil</span>
+                            <span class="positionUser">Сутрудник ГО</span>
+                        </div>
+                        <div class="settings">
+                            <div class="icon">
+                                <i class="icon-chevron-down"></i>
+                            </div>
+                            <!-- <div class="showHide">
+                                <p>Some thing here</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="mainContent">
+            <nav class="navLeftMenu">
+                <ul class="leftMenu">
+                    <li><a class="active" href="#"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m10 3h-7v7h7z"/><path d="m21 3h-7v7h7z"/><path d="m21 14h-7v7h7z"/><path d="m10 14h-7v7h7z"/></g></svg><span>Панель управления</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m20.4668 7.77972h-16c-1.10457 0-2 .89543-2 2v9.99998c0 1.1046.89543 2 2 2h16c1.1046 0 2-.8954 2-2v-9.99998c0-1.10457-.8954-2-2-2z"/><path d="m16.4668 21.7797v-15.99998c0-.53043-.2107-1.03914-.5858-1.41421s-.8838-.58579-1.4142-.58579h-4c-.53044 0-1.03914.21072-1.41422.58579-.37507.37507-.58578.88378-.58578 1.41421v15.99998"/></g></svg><span>Поиск организации</span></a></li>
+                    <li><a href="#"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m23 7-7 5 7 5z"/><path d="m14 5h-11c-1.10457 0-2 .89543-2 2v10c0 1.1046.89543 2 2 2h11c1.1046 0 2-.8954 2-2v-10c0-1.10457-.8954-2-2-2z"/></g></svg><span>Прокатные удостоверения</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m14.4768 2.2066h-7.99999c-.53044 0-1.03914.21072-1.41422.58579-.37507.37507-.58578.88378-.58578 1.41421v16c0 .5304.21071 1.0391.58578 1.4142.37508.3751.88378.5858 1.41422.5858h11.99999c.5304 0 1.0391-.2107 1.4142-.5858s.5858-.8838.5858-1.4142v-12z"/><path d="m14.4768 2.2066v6h6"/><path d="m16.4768 13.2066h-7.99999"/><path d="m16.4768 17.2066h-7.99999"/><path d="m10.4768 9.2066h-.99999-1"/></g></svg><span>Отчет</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m.89502.817657h24v24h-24z"/></clipPath><g clip-path="url(#a)" stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m17.895 6.81766h6v6.00004"/><path d="m23.895 6.81766-9.5 9.50004-4.99998-5-7.5 7.5"/></g></svg><span>Статистика по проданным билетам</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m9.1416 21.3329h-4c-.53043 0-1.03914-.2107-1.41421-.5858-.37507-.375-.58579-.8837-.58579-1.4142v-13.99997c0-.53043.21072-1.03914.58579-1.41421s.88378-.58579 1.41421-.58579h4"/><path d="m16.1416 17.3329 5-5-5-4.99997"/><path d="m21.1416 12.3329h-12"/></g></svg><span>Выход</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+
+
+                <div class="well pb40">
+                    <div class="headBlock flexbox between">
+                        <h2>Поиск и просмотр прокатного удостоверения</h2>
+                    </div>
+                    <div class="contentBlock">
+                        <div class="showHide">
+                            <div class="flexbox flex-end wrap filterPanel padding p-r-0">
+                                <label class="label w250">
+                                    <p class="m-b-10">Номер ПУ</p>
+                                    <input class="input" type="text" placeholder="Введите номер ПУ">
+                                </label>
+                                <label class="label w250">
+                                    <p class="m-b-10">Название фильма</p>
+                                    <input class="input" type="text" placeholder="Введите название фильма">
+                                </label>
+                                <div class="selectBox">
+                                    <p class="m-b-10">Год выпуска</p>
+                                    <div class="select w95">
+                                        <div class="selected">2020</div>
+                                        <div class="icon" data-select>
+                                            <i class="icon-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="show">
+                                        <span>2021</span>
+                                        <span>2022</span>
+                                        <span>2023</span>
+                                        <span>2024</span>
+                                    </div>
+                        
+                                    <select class="trueSelect" name="year"><option value=""></option></select>
+                                </div>
+                                <div class="selectBox">
+                                    <p class="m-b-10">Страна</p>
+                                    <div class="select w170">
+                                        <div class="selected">Все</div>
+                                        <div class="icon" data-select>
+                                            <i class="icon-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="show">
+                                        <span>Казахстан</span>
+                                        <span>Россия</span>
+                                        <span>Китай</span>
+                                        <span>Йошкарала)))</span>
+                                    </div>
+                        
+                                    <select class="trueSelect" name="country"><option value=""></option></select>
+                                </div>
+                                <label class="label w250">
+                                    <p class="m-b-10">Студия</p>
+                                    <input class="input" type="text" placeholder="Название студии">
+                                </label>
+                            </div>
+                            <div class="flexbox flex-end wrap filterPanel padding p-r-0">
+                                <div class="selectBox">
+                                    <p class="m-b-10">Жанр</p>
+                                    <div class="select w170">
+                                        <div class="selected">Фантастика</div>
+                                        <div class="icon" data-select>
+                                            <i class="icon-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="show">
+                                        <span>Фантастика</span>
+                                        <span>Комедия</span>
+                                        <span>Боевик</span>
+                                        <span>Ужасы</span>
+                                    </div>
+                        
+                                    <select class="trueSelect" name="janr"><option value=""></option></select>
+                                </div>
+                                <div class="selectBox">
+                                    <p class="m-b-10">Ограничения</p>
+                                    <div class="select w95">
+                                        <div class="selected">12+</div>
+                                        <div class="icon" data-select>
+                                            <i class="icon-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <div class="show">
+                                        <span>0+</span>
+                                        <span>6+</span>
+                                        <span>12+</span>
+                                        <span>18+</span>
+                                    </div>
+                        
+                                    <select class="trueSelect" name="age"><option value=""></option></select>
+                                </div>
+                                <label class="label w230">
+                                    <p class="m-b-10">Правообладатели</p>
+                                    <input class="input" type="text" placeholder="ТОО «Медетфильм»">
+                                </label>
+                                <label class="label w170">
+                                    <p class="m-b-10">Категория</p>
+                                    <input class="input" type="text" placeholder="Введите категорию">
+                                </label>
+
+                                <label class="label w320">
+                                    <p class="m-b-10">Категория проката</p>
+                                    <input class="input" type="text" placeholder="Введите категорию проката">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="center m-t-20">
+                            <button class="cbtn blue link showHideBtn active"><i class="icon-chevron-down"></i><span>Свернуть фильтр</span></button>
+                        </div>
+
+                        <div class="table border-top">
+                            <table>
+                                <thead>
+                                    <th>Номер ПУ</th>
+                                    <th>Название фильма</th>
+                                    <th>Страна</th>
+                                    <th>Год выпуска</th>
+                                    <th>Жанр</th>
+                                    <th class="w15">Действия</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>576 54546 442 313</strong></td>
+                                        <td>Довод</td>
+                                        <td>Великобритания</td>
+                                        <td>2020 год</td>
+                                        <td>Фантастика</td>
+                                        <td> <button class="btn"><i class="icon-eye"></i> Просмотр</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>986 54584 522 001</strong></td>
+                                        <td>Феи: Тайна страны драконов</td>
+                                        <td>Германия</td>
+                                        <td>2020 год</td>
+                                        <td>Мультфильм</td>
+                                        <td> <button class="btn"><i class="icon-eye"></i> Просмотр</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>777 58654 543 022</strong></td>
+                                        <td>Вратарь Галактики</td>
+                                        <td>Россия</td>
+                                        <td>2020 год</td>
+                                        <td>Фантастика</td>
+                                        <td> <button class="btn"><i class="icon-eye"></i> Просмотр</button></td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <p class="rowInColumn"><strong>Строк в столбце: 3</strong></p>
+                        <div class="space"></div>
+                        <p class=" "><strong>3 из 10</strong></p>
+                        <div class="arrows">
+                            <div class="icon-arrow left"></div>
+                            <div class="icon-arrow right"></div>
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="copyright">® eCinema 2020 год.</div>
+
+                <nav class="fNav">
+                    <ul class="fNavList">
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Правила</a></li>
+                        <li><a href="#">Техническая служба</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/app.js"></script>
+</body>
+</html>

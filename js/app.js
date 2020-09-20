@@ -34,7 +34,6 @@ $(document).ready(function () {
             icon = $(this);
 
             icon.on('click', function(){
-                console.log('111')
                 parent = $(this).parents('.selectBox');
                 trueSelect = parent.find('.trueSelect option');
                 selected =  parent.find('.selected');
@@ -89,19 +88,44 @@ $(document).ready(function () {
 
     //=================================================================================================
     // Registation tabs
-    var tabsReg = $('.tabs.reg button'),
-        formReg = $('.formReg');
-
+    var tabsReg = $('.tabs.reg button')
+        
         tabsReg.each(function(){
             $(this).on('click', function(){
                 data = $(this).data('tab');
+                formReg = $('.formReg');
 
                 $('.tabs button').removeClass('active');
                 $(this).addClass('active');
-                formReg.data('tab', data).toggleClass('active');
+                formReg.each(function(){
+                    formRegData = $(this).data('tab');
+                    if(formRegData == data){
+                        formReg.removeClass('active');
+                        $(this).addClass('active');
+                    }
+                });
+            });
+        });
+    
+
+        var tabs = $('.tabs button');       
+
+        tabs.each(function(){
+            $(this).on('click', function(){
+                data = $(this).data('tab');
+                getTab = $('.getTab');
+                
+                $('.tabs button').removeClass('active');
+                $(this).addClass('active');
+                getTab.each(function(){
+                    getTabData = $(this).data('tab');
+                    if(getTabData == data){
+                        getTab.removeClass('active')
+                        $(this).addClass('active')
+                    }
+                })
             })
         })
-    
     //=================================================================================================
 
     // Registration steps
@@ -136,18 +160,18 @@ $(document).ready(function () {
         org = $('.blockOrganisation .label'),
         cloneFix = org.clone();
 
-    addOrganisation.each(function(){
-        $(this).on('click', function(){
-            clone = cloneFix.clone();
-            id = new Date().getUTCMilliseconds();
-            cloneInput = clone.find('.input').attr({
-                'name': 'org-' + id
+        addOrganisation.each(function(){
+            $(this).on('click', function(){
+                clone = cloneFix.clone();
+                id = new Date().getUTCMilliseconds();
+                cloneInput = clone.find('.input').attr({
+                    'name': 'org-' + id
+                });
+                blockOrganisation.append(clone);
             });
-            blockOrganisation.append(clone);
-        })
-    })
+        });
     
-    
+    //=================================================================================================
     //Add country
 
     var addCountry = $('.addCountry'),
@@ -173,8 +197,120 @@ $(document).ready(function () {
         })
     })
 
+    //================================================================================================= 
+    // Header Search 
+    var searchBlock = $('.searchBlock'),
+        search = searchBlock.find('.icon-search'),
+        searchClose =  searchBlock.find('.icon-close');
 
+        if(searchBlock.width() <= 40){
+            search.on('click', function(){
+                searchBlock.addClass('active');
+                if(searchBlock.hasClass('active')){
+                    searchClose.on('click', function(){
+                        searchBlock.removeClass('active');
+                    });
+                }
+            });
+        }
 
+    //=================================================================================================
+    // Tabs
+    var tabs = $('.tabs button'),    
+        innerTabs = $('.innerTabs button');    
+
+        tabs.each(function(){
+            $(this).on('click', function(){
+                data = $(this).data('tab');
+                getTab = $('.getTab');
+                
+                tabs.removeClass('active');
+                $(this).addClass('active');
+                getTab.each(function(){
+                    getTabData = $(this).data('tab');
+                    if(getTabData == data){
+                        getTab.removeClass('active')
+                        $(this).addClass('active')
+                    }
+                })
+            })
+        });
+        innerTabs.each(function(){
+            $(this).on('click', function(){
+                data = $(this).data('inner-tab');
+                getInnerTab = $('.getInnerTab');
+                
+                innerTabs.removeClass('active');
+                $(this).addClass('active');
+                getInnerTab.each(function(){
+                    getInnerTabData = $(this).data('inner-tab');
+                    if(getInnerTabData == data){
+                        getInnerTab.removeClass('active')
+                        $(this).addClass('active')
+                    }
+                })
+            })
+        });
+
+        
+    //=================================================================================================
+    // ShowHide Block
+
+    var showHideBtn = $('.showHideBtn');
+        showHide = $(".showHide");
+        showHideHeight = showHide.height();
+
+        showHide.css({'height': showHideHeight});
+
+    showHideBtn.each(function(){
+        $(this).on('click', function(){
+            $(this).toggleClass('active');
+            showHide.toggleClass('active');
+        })
+    })
+    
+     //=================================================================================================
+    // Modal
+        var cbtn = $('.cbtn[data-modal]'),
+            modalBlock = $('.modalBlock'),
+            modal = modalBlock.find('.modal'),
+            closeModal =  modalBlock.find('*[close]');
+
+        cbtn.each(function(){
+            $(this).on('click', function(){
+                data = $(this).data('modal');
+
+                modal.each(function(){
+                    dataModal = $(this).data('modal');
+
+                    if(dataModal == data){
+                        modalBlock.addClass('active');
+                        $(this).addClass('active');
+                    }
+                    console.log( dataModal )
+                })
+            })
+        })
+
+        closeModal.on('click', function(){
+            modalBlock.removeClass('active');
+            modal.removeClass('active');
+        })
+    
+    
+    
 });
 
+
+    // var progress = 30; 
+    // var progressEl = document.querySelector('.progress'); 
+    // function increaseProgress() { 
+    //     if( progress == 180){
+    //         progress = 180;
+    //     }
+    //     else{
+    //         progress = progress + 10; 
+    //         progressEl.style.transform = 'rotate('+progress+'deg)'; 
+    //     }
+    // } 
 

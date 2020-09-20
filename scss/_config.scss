@@ -24,15 +24,31 @@ $sides: (top, bottom, left, right); // Leave this variable alone
 
 $color1: #6B6B6B;
 $color2: #838383;
+$color3: #B7B7B7;
+
 $orange: #FDAB5F;
+$lightOrange: #F9BB98;
 $activeColor: #98BFF9;
 $bgColor: #FFCE4F;
 $darkBlue: #2C8BE2;
+$lightBlue: #EDF9FF;
 $red: #FF6C6C;
 $green: #1BA642;
+$lightGreen: #AADFB6;
 $inputText: #9E9E9E;
 $bgDisabled: #EFEFEF;
 $hrColor: #E8E8E8;
+$lightGray: #D8D8D8;
+$gray52: #525252;
+
+$borderColor: #EBEFF2;
+$borderBg: #FAFAFA;
+
+$linkMenu: #7C7C7C;
+
+//table
+$hoverTr: #F7FBFF;
+$bgButton: #96BCF5;
 
 
 $commonFont: 'Open Sans', sans-serif;
@@ -43,15 +59,33 @@ $class-icon: "icon-";
 $icon-size: 24px;
 
 $icon-list: (
+  ("eye")
+  ("ban")
   ("user")
   ("info")
+  ("info-green")
+  ("info-orange")
   ("lock")
   ("arrow")
+  ("close")
+  ("bell")
+  ("search")
+  ("clock")
   ("download")
+  ("calendar")
   ("chevron-down")
+  ("copyright")
   ("download-blue")
   ("plus-circle")
   ("chevron-down-small")
+  ("more-dots")
+//Menu
+  ("panel-control")
+  ("briefcase")
+  ("video")
+  ("file-text")
+  ("trending-up")
+  ("log-out")
 
 );
 [class*='#{$class-icon}'] {
@@ -145,12 +179,6 @@ a {
 	text-decoration: none;
 }
 
-.w100{
-	width: 100%;
-}
-.w50{
-	width: 50%;
-}
 .center{
 	display: flex;
 	align-items: center;

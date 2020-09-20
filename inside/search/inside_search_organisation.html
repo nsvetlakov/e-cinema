@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Cinema</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+ 
+</head>
+<body>
+    <div class="flexWrap">
+        <header>
+            <div class="container">
+                <div class="flexbox between">
+                    <a href="#" class="logo"><img src="../../img/logo.svg" alt="e-Cinema"></a>
+                    <div class="searchBlock">
+                        <form action="" name="searchSite">
+                            <input class="search" type="text" name="search" placeholder="Поиск">
+                            <div class="icon">
+                                <i class="icon icon-search"></i>
+                                <i class="icon icon-close"></i>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="languages">
+                        <a class="lang" data-lang="kz" href="#">kz</a>
+                        <a class="lang active" data-lang="ru" href="#">ru</a>
+                        <a class="lang" data-lang="en" href="#">en</a>
+                    </div>
+                    <div class="notification active"><i class="icon icon-bell"></i></div>
+                    <div class="userBlock flexbox">
+                        <i class="icon icon-user"></i>
+                        <div class="text flexbox column">
+                            <span class="name">User Profil</span>
+                            <span class="positionUser">Сутрудник ГО</span>
+                        </div>
+                        <div class="settings">
+                            <div class="icon">
+                                <i class="icon-chevron-down"></i>
+                            </div>
+                            <!-- <div class="showHide">
+                                <p>Some thing here</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="mainContent">
+            <nav class="navLeftMenu">
+                <ul class="leftMenu">
+                    <li><a class="active" href="#"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m10 3h-7v7h7z"/><path d="m21 3h-7v7h7z"/><path d="m21 14h-7v7h7z"/><path d="m10 14h-7v7h7z"/></g></svg><span>Панель управления</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m20.4668 7.77972h-16c-1.10457 0-2 .89543-2 2v9.99998c0 1.1046.89543 2 2 2h16c1.1046 0 2-.8954 2-2v-9.99998c0-1.10457-.8954-2-2-2z"/><path d="m16.4668 21.7797v-15.99998c0-.53043-.2107-1.03914-.5858-1.41421s-.8838-.58579-1.4142-.58579h-4c-.53044 0-1.03914.21072-1.41422.58579-.37507.37507-.58578.88378-.58578 1.41421v15.99998"/></g></svg><span>Поиск организации</span></a></li>
+                    <li><a href="#"><svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m23 7-7 5 7 5z"/><path d="m14 5h-11c-1.10457 0-2 .89543-2 2v10c0 1.1046.89543 2 2 2h11c1.1046 0 2-.8954 2-2v-10c0-1.10457-.8954-2-2-2z"/></g></svg><span>Прокатные удостоверения</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m14.4768 2.2066h-7.99999c-.53044 0-1.03914.21072-1.41422.58579-.37507.37507-.58578.88378-.58578 1.41421v16c0 .5304.21071 1.0391.58578 1.4142.37508.3751.88378.5858 1.41422.5858h11.99999c.5304 0 1.0391-.2107 1.4142-.5858s.5858-.8838.5858-1.4142v-12z"/><path d="m14.4768 2.2066v6h6"/><path d="m16.4768 13.2066h-7.99999"/><path d="m16.4768 17.2066h-7.99999"/><path d="m10.4768 9.2066h-.99999-1"/></g></svg><span>Отчет</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><clipPath id="a"><path d="m.89502.817657h24v24h-24z"/></clipPath><g clip-path="url(#a)" stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m17.895 6.81766h6v6.00004"/><path d="m23.895 6.81766-9.5 9.50004-4.99998-5-7.5 7.5"/></g></svg><span>Статистика по проданным билетам</span></a></li>
+                    <li><a href="#"><svg fill="none" height="25" viewBox="0 0 25 25" width="25" xmlns="http://www.w3.org/2000/svg"><g stroke="#98bff9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m9.1416 21.3329h-4c-.53043 0-1.03914-.2107-1.41421-.5858-.37507-.375-.58579-.8837-.58579-1.4142v-13.99997c0-.53043.21072-1.03914.58579-1.41421s.88378-.58579 1.41421-.58579h4"/><path d="m16.1416 17.3329 5-5-5-4.99997"/><path d="m21.1416 12.3329h-12"/></g></svg><span>Выход</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <button class="cbtn link backspace"><i class="icon-chevron-down"></i><strong>Назад</strong></button>
+                <div class="well pb40">
+                    <div class="headBlock flexbox between">
+                        <h2>ТОО «Компания Новый Киноформат»</h2>
+                    </div>
+                    <div class="contentBlock">
+                        <div class="flexbox imgText border-bottom">
+                            <div class="img">
+                                <img src="../../img/img1.jpg" alt="Img1">
+                            </div>
+                            <div class="text">
+                                <p>Компания «Киноформат» - активно развивающаяся организация  с большим управленческим и идейным потенциалом. Компания с 2008 года занимается строительством и управлением киноцентров, формирует репертуарную политику («роспись» фильмов)  для кинозалов в Казахстане, организует работу киноцентров переданных компании в доверительное управление на договорных условиях.</p>
+                            </div>
+                        </div>
+                        <div class="flexbox padding m-t-25 m-b-45 blocksInfoOrg" data-gap="45">
+                            <div class="block" data-flex>
+                                <h4>БИН/ИИН</h4>
+                                <p>3277848383573852</p>
+                            </div>
+                            <div class="block" data-flex>
+                                <h4>Регион</h4>
+                                <p>Алматинская область, г. Алматы</p>
+                            </div>
+                            <div class="block" data-flex>
+                                <h4>Юридический адрес</h4>
+                                <p>Ул. Байзакова 280 дом 3, 050040</p>
+                            </div>
+                            <div class="block" data-flex>
+                                <h4>Контакты</h4>
+                                <div class="flexbox row" data-gap="45">
+                                    <a href="tel:+7 (777) 777 77 77" data-flex>+7 (777) 777 77 77</a>
+                                    <a href="mailto:kino@mail.ru" data-flex>kino@mail.ru</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tabs">
+                            <button class="cbtn link " data-tab="showFilms">Показы фильмов</button>
+                            <button class="cbtn link" data-tab="profit">Прибыль</button>
+                            <button class="cbtn link active" data-tab="dataTax">Данные о налоговых отчислений</button>
+                        </div>
+
+                        <!-------------------------------------------------- showFilms---------------------------------------------- -->
+                        <div class="getTab " data-tab="showFilms">
+                            <div class="blueBlocks">
+                                <div class="block w250">
+                                    <p class="text">Общие показы</p>
+                                    <p class="numb">677</p>
+                                </div>
+                            </div>
+
+                            <div class="well">
+                                <div class="headBlock flexbox between">
+                                    <h2>Показы</h2>
+                                    <div class="flexbox">
+                                        <div class="select">
+                                            <p>Показать:</p>
+                                            <select name="" id="">
+                                                <option value="">По неделям</option>
+                                            </select>
+                                        </div>
+                                        <div class="flexbox chooseDate">
+                                            <i class="icon-chevron-down left"></i>
+                                            <p class="date">09.07.2020 - 25.08.2020</p>
+                                            <i class="icon-chevron-down right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contentBlock">
+                                    <div id="chartShowFilms" class="chart"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------- profit---------------------------------------------- -->
+                        <div class="getTab" data-tab="profit">
+                            <div class="blueBlocks">
+                                <div class="block w250">
+                                    <p class="text">Общая прибыль</p>
+                                    <p class="numb">807 000 тг.</p>
+                                </div>
+                            </div>
+
+                            <div class="well">
+                                <div class="headBlock flexbox between">
+                                    <h2>Показы</h2>
+                                    <div class="flexbox">
+                                        <div class="select">
+                                            <p>Показать:</p>
+                                            <select name="" id="">
+                                                <option value="">По неделям</option>
+                                            </select>
+                                        </div>
+                                        <div class="flexbox chooseDate">
+                                            <i class="icon-chevron-down left"></i>
+                                            <p class="date">09.07.2020 - 25.08.2020</p>
+                                            <i class="icon-chevron-down right"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contentBlock">
+                                    <div id="chartProfit" class="chart"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------------------------------------------------- dataTax---------------------------------------------- -->
+                        <div class="getTab active" data-tab="dataTax">
+                            <label class="withIcon right w230">
+                                <!-- <p>Дата</p> -->
+                                <i class="icon icon-calendar"></i>
+                                <input class="input" type="text" placeholder="03.08.2020 - 03.10.2020">
+                            </label>
+
+                            <div class="table">
+                                <table>
+                                    <thead>
+                                        <th>Дата</th>
+                                        <th>Вид налога</th>
+                                        <th>Ставка</th>
+                                        <th class="w30">Выгрузить</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>03.10.2020</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <div class="flexbox" data-gap="15">
+                                                    <a class="cbtn blue" href="#" data-flex>PDF</a>
+                                                    <a class="cbtn blue" href="#" data-flex>xls</a>
+                                                    <a class="cbtn blue" href="#" data-flex>doc</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.10.2020</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <div class="flexbox" data-gap="15">
+                                                    <a class="cbtn blue" href="#" data-flex>PDF</a>
+                                                    <a class="cbtn blue" href="#" data-flex>xls</a>
+                                                    <a class="cbtn blue" href="#" data-flex>doc</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>03.10.2020</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>
+                                                <div class="flexbox" data-gap="15">
+                                                    <a class="cbtn blue" href="#" data-flex>PDF</a>
+                                                    <a class="cbtn blue" href="#" data-flex>xls</a>
+                                                    <a class="cbtn blue" href="#" data-flex>doc</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="pagination">
+                                <p class="rowInColumn"><strong>Строк в столбце: 3</strong></p>
+                                <div class="space"></div>
+                                <p class=" "><strong>3 из 10</strong></p>
+                                <div class="arrows">
+                                    <div class="icon-arrow left"></div>
+                                    <div class="icon-arrow right"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="copyright">® eCinema 2020 год.</div>
+
+                <nav class="fNav">
+                    <ul class="fNavList">
+                        <li><a href="#">О проекте</a></li>
+                        <li><a href="#">Правила</a></li>
+                        <li><a href="#">Техническая служба</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../js/app.js"></script>
+    <script src="../../js/apexcharts.min.js"></script>
+    <script src="../../js/charts.js"></script>
+</body>
+</html>
