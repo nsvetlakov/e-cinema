@@ -744,7 +744,7 @@
                     </div>
                 </div>
 
-                <div class="steps">
+                <div class="steps ">
                     <div class="flexbox center column m-b-35">
                         <h3 class="titleStep">Шаг 4-6</h3>
                         <p class="fz16"><strong>Заполните следующие поля</strong></p>  
@@ -798,7 +798,7 @@
                     </div>
                 </div>
 
-                <div class="steps">
+                <div class="steps active">
                     <div class="flexbox center column m-b-35">
                         <h3 class="titleStep">Шаг 5-6</h3>
                         <p class="fz16"><strong>Заполните следующие поля</strong></p>  
@@ -807,7 +807,7 @@
                     <hr class="m-b-20">
 
                     <div class="overflowTable">
-                        <table class="table">
+                        <table class="table mainTable">
                             <thead>
                                 <th>Название оригинала</th>
                                 <th>Страна происхождения</th>
@@ -823,20 +823,35 @@
                                     <td>Полнометражный</td>
                                     <td>12 000 чел.</td>
                                 </tr>
-                                <tr class="clone">
-                                    <td>Введите название</td>
-                                    <td>Страна</td>
-                                    <td>Язык</td>
-                                    <td>Тип</td>
-                                    <td>Численость чел.</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
 
 
+                    <div class="overflowTable">
+                        <table class="table addTable">
+                            <thead>
+                                <th>Название оригинала</th>
+                                <th>Страна происхождения</th>
+                                <th>Язык оригинала</th>
+                                <th>Тип фильма</th>
+                                <th>Число посетителей, человек</th>
+                            </thead>
+                            <tbody>
+
+                                <tr class="clone">
+                                    <td><input class="nameTd" name="nameTd" type="text" placeholder="Введите название"><span class="textInput"></span></td>
+                                    <td><input class="countryTd" name="countryTd" type="text" placeholder="Страна"><span class="textInput"></span></td>
+                                    <td><input class="langTd" name="langTd" type="text" placeholder="Язык"><span class="textInput"></span></td>
+                                    <td><input class="typeTd" name="typeTd" type="text" placeholder="Тип"><span class="textInput"></span></td>
+                                    <td><input class="numbPeopleTd" name="numbPeopleTd" type="text" placeholder="Численость чел."><span class="textInput"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                     <div class="m-t-20">
-                        <div class="addCountry">
+                        <div class="addTableTr">
                             <i class="icon icon-plus-circle"></i>
                             <span>Добавить</span>
                         </div>
@@ -848,7 +863,7 @@
                     </div>
                 </div>
 
-                <div class="steps active">
+                <div class="steps ">
                     <div class="flexbox center column m-b-35">
                         <h3 class="titleStep">Шаг 6-6</h3>
                         <p class="fz16"><strong>Заполните следующие поля</strong></p>  

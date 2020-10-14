@@ -1266,7 +1266,8 @@ strong {
   position: relative; }
 
 .transition, .cbtn.blue, .cbtn.green, .cbtn.gray, .selectBox .select .icon, .selectBox .show span, .tabs .link, .inner-tabs .link, .toEnterSystem .forgetPassword, .toEnterSystem .regToSysytem, .addOrganisation span,
-.addCountry span, footer .container .fNav .fNavList li a {
+.addCountry span,
+.addTableTr span, footer .container .fNav .fNavList li a {
   transition: .3s linear; }
 
 .flexbox {
@@ -1722,6 +1723,8 @@ header .container {
         opacity: 1;
         z-index: 1;
         position: relative; }
+      .registration .formReg .steps.maxW {
+        max-width: 850px; }
       .registration .formReg .steps .titleStep {
         color: #FDAB5F;
         font-size: 18px;
@@ -1732,9 +1735,17 @@ header .container {
 .overflowTable {
   width: 100%;
   overflow: auto; }
+  .overflowTable + .overflowTable {
+    margin-top: 60px; }
   .overflowTable .table {
     width: 100%;
     min-width: 400px; }
+    .overflowTable .table.addTable .clone input {
+      width: 100%;
+      border: 0 none;
+      background: transparent; }
+      .overflowTable .table.addTable .clone input.empty::placeholder {
+        color: #FF6C6C; }
     .overflowTable .table thead th {
       color: #6B6B6B;
       text-align: left;
@@ -1747,15 +1758,18 @@ header .container {
         padding: 10px 15px; }
 
 .addOrganisation,
-.addCountry {
+.addCountry,
+.addTableTr {
   display: flex;
   cursor: pointer;
   align-items: center; }
   .addOrganisation:hover span,
-  .addCountry:hover span {
+  .addCountry:hover span,
+  .addTableTr:hover span {
     color: #98BFF9; }
   .addOrganisation .icon,
-  .addCountry .icon {
+  .addCountry .icon,
+  .addTableTr .icon {
     flex-shrink: 0;
     margin-right: 7px; }
 

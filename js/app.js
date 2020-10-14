@@ -34,6 +34,7 @@ $(document).ready(function () {
             icon = $(this);
 
             icon.on('click', function(){
+                console.log($(this));
                 parent = $(this).parents('.selectBox');
                 trueSelect = parent.find('.trueSelect option');
                 selected =  parent.find('.selected');
@@ -61,6 +62,14 @@ $(document).ready(function () {
     }
     selectBox();
 
+    function resetSelect(){
+        var selectBox = $('.icon[data-select]');
+        selectBox.each(function(){
+            icon = $(this);
+            icon.unbind( "click" );
+        })
+    }
+
     //=================================================================================================
 
     // Plus & Minus Inputs
@@ -84,8 +93,13 @@ $(document).ready(function () {
         }
     }
     plusAndMinus();
-
-
+    function resetPlusAndMinus(){
+        var $quantityArrowMinus = $(".inputNumber .minus");
+        var $quantityArrowPlus = $(".inputNumber .plus");
+    
+        $quantityArrowMinus.unbind( "click" );
+        $quantityArrowPlus.unbind( "click" );
+    }
     //=================================================================================================
     // Registation tabs
     var tabsReg = $('.tabs.reg button')
@@ -192,9 +206,52 @@ $(document).ready(function () {
             });
 
             countryBlock.append(clone);
+
+            resetSelect();
             selectBox();
+
+            resetPlusAndMinus()
             plusAndMinus();
+           
         })
+    })
+
+    //=================================================================================================
+    //Add table tr
+    var addTableTr = $('.addTableTr'),
+        addTable = $('.addTable'),
+        mainTable = $('.mainTable');
+        cloneTr = addTable.find('.clone');
+        clone = cloneTr.clone();
+
+    addTableTr.on('click', function(){
+        presentTrClone = addTable.find('.clone');
+        addTbody = addTable.find('tbody');
+        mainTbody = mainTable.find('tbody');
+
+        inputs = cloneTr.find('input');
+
+        inputs.each(function(){
+            input = $(this);
+            if(input.val() == ""){
+                input.addClass('empty')
+            }else{
+                input.removeClass('empty')
+                text = input.val();
+                input.parent().text(text);
+
+                if(input.val() != ""){
+                    cloneTr.remove();
+                    addTbody.append(clone);
+                    mainTbody.append(presentTrClone)
+                }
+
+
+            }
+
+
+        })
+
     })
 
     //================================================================================================= 
